@@ -1,0 +1,171 @@
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+    @include mq(md) {
+        width: 85%;
+    }
+}
+section {
+    display: block;
+}
+.container-fluid {
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.w-40 {
+    max-width: 50%;
+}
+
+@include mq(lg) {
+    .w-40-lg {
+        max-width: 50%;
+    }
+}
+.text-sm {
+    font-size: 1.125rem;
+}
+.text-white {
+    color: var(--white);
+}
+.pt-5 {
+    padding-top: 4rem;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.hidden-xs {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+    // outline: 1px solid olivedrab;
+    justify-content: space-between;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+.mb-3 {
+    margin-bottom: 3rem;
+}
+.left-space-sm {
+    margin-right: 10px;
+}
+.m-auto {
+    margin: 0 auto;
+}
+.checkbox {
+    position: relative;
+    display: block;
+    margin-block: 10px;
+}
+.primary-color {
+    color: var(--color-gold);
+}
+// For timepicker
+.popover {
+    border-radius: 0;
+    position: absolute;
+    padding: 1px;
+    font-family: 'Josefin sans', sans-serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    .text-primary {
+        color: var(--black);
+    }
+
+    .clockpicker-canvas line {
+        stroke: var(--color-gold);
+    }
+
+    .clockpicker-canvas-bearing,
+    .clockpicker-canvas-fg {
+        stroke: none;
+        fill: var(--color-gold);
+    }
+
+    .clockpicker-canvas-bg {
+        stroke: none;
+        fill: var(--color-gold);
+    }
+}
+
+// For datepicker
+.datepicker-panel > ul > li.picked,
+.datepicker-panel > ul > li.picked:hover {
+    color: var(--black);
+    background: var(--dark-gold);
+}
+
+.datepicker-panel > ul > li[data-view='month current'],
+.datepicker-panel > ul > li[data-view='year current'],
+.datepicker-panel > ul > li[data-view='years current'] {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 1rem;
+}
+
+.datepicker-panel > ul[data-view='week'] > li,
+.datepicker-panel > ul[data-view='week'] > li:hover {
+    font-family: 'Josefin sans', sans-serif;
+}
+
+.datepicker-panel > ul > li.highlighted {
+    background: var(--color-gold);
+}
+
+.datepicker-panel > ul > li {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 14px;
+}
+
+.datepicker-top-left,
+.datepicker-top-right {
+    border-top-color: #ccc;
+}
+
+// For input number spinners
+input[type='number'].input-number–noSpinners {
+    -moz-appearance: textfield;
+    -webkit-appereance: textfield;
+}
+input[type='number'].input-number–noSpinners::-webkit-inner-spin-button,
+input[type='number'].input-number–noSpinners::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.darker-bg {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}

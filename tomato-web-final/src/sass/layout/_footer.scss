@@ -1,0 +1,73 @@
+@use '../abstracts/mixins' as *;
+@use '../base/root' as *;
+.footer {
+    background-attachment: scroll;
+    @include mq(md) {
+        background-attachment: none;
+    }
+}
+
+.footer {
+    font-family: 'Josefin Sans';
+    background: url(/images/bg6.png) no-repeat center center;
+    background-size: cover;
+    padding: 1px;
+    h1 {
+        color: var(--color-gold);
+        font-size: 1.375rem;
+        text-align: left;
+        margin: 60px 0 26px;
+    }
+    p {
+        color: var(--white);
+        font-size: 19px;
+    }
+    a {
+        color: var(--color-gold);
+        text-decoration: none;
+    }
+    &-social-icons {
+        padding: 6px 7px 7px;
+        margin-bottom: 25px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.2);
+        width: max-content;
+        a {
+            padding: 9px 0 6px;
+            margin-left: 0;
+            color: var(--white);
+            background-color: #343434;
+            border-radius: 2px;
+            width: 35px;
+            height: 38px;
+            display: inline-block;
+            text-align: center;
+            font-size: 17px;
+        }
+    }
+    &-adress {
+        p {
+            font-size: 17px;
+            color: #bcbcbc;
+        }
+        .fa {
+            margin-right: 10px;
+            color: var(--color-gold);
+            width: 18px;
+            text-align: center;
+        }
+    }
+    &-copyright {
+        text-align: center;
+        background-color: #1c1c1e;
+        padding: 1px;
+        p {
+            margin: 30px 0;
+            color: #b5b5b4;
+            font-size: 1rem;
+            @include mq(lg) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

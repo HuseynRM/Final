@@ -1,0 +1,79 @@
+// for Contact Section
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.contact {
+    padding: 4.375rem 0;
+    justify-content: center;
+
+    &-box {
+        margin-bottom: 1.25rem;
+
+        @include mq(lg) {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &-box__info {
+        p {
+            color: #6b6b6b !important;
+            font-size: 0.9375rem;
+
+            @include mq(lg) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    &-box__social {
+        margin-bottom: 3rem;
+        a {
+            display: inline-block;
+            background-color: #262526;
+            color: var(--white);
+            padding: 0;
+            font-size: 1.25rem;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: var(--color-gold);
+                color: var(--black);
+            }
+        }
+    }
+}
+
+.form {
+    &-group {
+        font-family: 'Josefin sans', sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    input {
+        font-size: var(--def-font-size);
+        height: 3rem;
+    }
+
+    input,
+    textarea {
+        border-radius: 0;
+        outline: none;
+        border: none;
+        background-color: var(--light);
+        padding: 0.625rem 1rem;
+        font-family: inherit;
+    }
+
+    text-area {
+        min-width: 9.375rem;
+        font-size: var(--def-font-size);
+    }
+    &-control {
+        display: block;
+        width: 100%;
+        color: #555;
+    }
+}
