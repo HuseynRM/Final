@@ -1,0 +1,32 @@
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.img-fluid {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+ul {
+    list-style-type: none;
+}
+button,
+input,
+textarea {
+    outline: 0;
+    -webkit-text-intend: 20px;
+}
+input {
+    text-indent: 20px;
+}

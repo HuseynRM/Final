@@ -1,0 +1,181 @@
+@use '../abstracts/mixins' as *;
+@use '../base/root' as *;
+.slider-wrapper {
+    text-align: center;
+}
+
+.about2 {
+    padding: 6.0625rem 0;
+    .col-pd {
+        padding-top: 1.6875rem;
+        text-align: left;
+        h2 {
+            font-weight: 900;
+            font-size: 2.25rem;
+            margin: 1.875rem 0 1.3125rem;
+            padding: 0;
+            line-height: 2.25rem;
+        }
+        p {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            padding-right: 2rem;
+            margin: 0 0 1.5625rem;
+            @include mq(lg) {
+                padding-right: 2.75rem;
+            }
+        }
+    }
+}
+
+// Services
+.services {
+    background: #1b1e20 url(/images/services.jpg) no-repeat center top;
+    background-size: cover;
+    padding-bottom: 95px;
+    z-index: 1;
+    &-slider {
+        text-align: center;
+    }
+    &-content {
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-align: center;
+            margin: 15px 0 21px;
+        }
+        p {
+            color: #85898c;
+            font-size: 1.125rem;
+            line-height: 2rem;
+            padding: 0 65px;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+// Team
+.team {
+    padding-bottom: 6.25rem;
+    &-stuff {
+        border-bottom: 1px solid #dcdddd;
+        padding-bottom: 1.875rem;
+        margin-bottom: 1.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4 {
+            font-size: 1rem;
+            margin: 37px 0 3px;
+            @include mq(lg) {
+                margin: 60px 0 5px;
+            }
+        }
+        p {
+            color: #0a0a0a;
+            font-size: 1.125rem;
+            margin: 0;
+        }
+    }
+    &-social {
+        display: flex;
+        margin: 1.25rem 0 auto;
+        padding: 0;
+        li+li {
+            margin-left: 1rem;
+        }
+        a {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+    }
+}
+
+.trusted {
+    &-quote {
+        background: url(../../../images/testimonals.png) no-repeat center center fixed;
+        background-size: cover;
+        text-align: center;
+        color: var(--white);
+        padding: 3.75rem 0;
+        backface-visibility: hidden;
+        img {
+            padding-bottom: 20px;
+            margin: 0 auto;
+        }
+        .quote-body {
+            color: var(--white);
+            font-size: 1.1875rem;
+            margin: 20px 0;
+            @include mq(lg) {
+                font-size: 1.9375rem;
+            }
+        }
+        .quote-author {
+            color: var(--white);
+            font-size: 1.125rem;
+            font-weight: 700;
+            @include mq(lg) {
+                font-size: 1.625rem;
+            }
+        }
+    }
+}
+
+.trusted-slider .slick-dots {
+    bottom: -30px;
+}
+
+.services-slider,
+.trusted-slider {
+    .slick-dots {
+        position: relative;
+        margin: 30px auto 0;
+        width: auto;
+        li {
+            position: relative;
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin: 0 4px;
+            padding: 0;
+            cursor: pointer;
+            button {
+                font-size: 0;
+                line-height: 0;
+                display: table;
+                width: 17px;
+                height: 17px;
+                padding: 0;
+                cursor: pointer;
+                color: transparent;
+                border: 0;
+                outline: medium;
+                background: #35393c;
+                border-radius: 50%;
+            }
+            &.slick-active {
+                background-color: transparent;
+                button {
+                    background-color: transparent;
+                    border: 2px solid var(--color-gold);
+                    &:before {
+                        opacity: 1;
+                        background: var(--color-gold);
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 7px;
+                        left: 7px;
+                        z-index: 999;
+                        font-size: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+@use '../abstracts/mixins' as *;
+.page-header {
+    background: url(/images/bg-image.jpg) no-repeat center top;
+    padding: 12.5rem 0 9.375rem;
+    background-size: cover;
+}

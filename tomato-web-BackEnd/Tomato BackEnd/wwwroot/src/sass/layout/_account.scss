@@ -1,0 +1,37 @@
+// for Contact Section
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.shop-content {
+    padding: 60px 0;
+    font-family: 'Josefin Sans';
+
+    .logreform {
+        border: 1px solid #e2e2e2;
+        padding: 50px;
+        min-height: 23.75rem;
+        label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #666;
+            margin-bottom: 5px;
+
+            @include mq(lg) {
+                font-size: 1.125rem;
+            }
+        }
+        label[for='rememberme'] {
+            cursor: pointer;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            height: 2.5rem;
+            border-radius: 0;
+            border: medium;
+            background-color: var(--light);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: var(--gray);
+    text-transform: uppercase;
+    // text-align: center;
+}
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+}
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 0 10px;
+    color: #828281;
+    font-size: 22px;
+}
+
+.heading-1 {
+    color: var(--white);
+    font-size: 3.8125rem;
+    font-weight: 900;
+    line-height: 4.375rem;
+
+    @include mq(lg) {
+        font-size: 4.375rem;
+    }
+
+    @media only screen and (max-width: 430px) {
+        font-size: 3rem;
+    }
+}
+
+.text-1 {
+    color: var(--white);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    font-family: 'Raleway';
+}
+
+.contact-box--header {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+}
+
+.footer-adress {
+    .fa,
+    .fas {
+        margin-right: 10px;
+        width: 18px;
+        text-align: center;
+        color: var(--color-gold);
+    }
+}
+
+.heading-2 {
+    font-size: 2rem;
+}
+
+.text-2 {
+    color: #777;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0.625rem 0 0.9375rem;
+}
