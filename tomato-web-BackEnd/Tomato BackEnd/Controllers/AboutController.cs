@@ -22,7 +22,9 @@ namespace Tomato_BackEnd.Controllers
             {
                 AboutStory = await _context.AboutStory.FirstOrDefaultAsync(),
                 SpecialServices = await _context.SpecialService.ToListAsync(),
-                AboutTeams = await _context.AboutTeams.ToListAsync()
+                AboutTeams = await _context.AboutTeams.ToListAsync(),
+                AboutTestimonials = await _context.AboutTestimonials.ToListAsync(),
+                Settings = await _context.Settings.ToListAsync()
             };
             return View(aboutVM);
         }

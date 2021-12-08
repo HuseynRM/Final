@@ -46,7 +46,7 @@ namespace Tomato_BackEnd
             {
                 endpoints.MapControllerRoute(
                         name: "default",
-                        pattern: "{controller=About}/{action=Index}/{id?}"
+                        pattern: "{controller=Home}/{action=Index}/{id?}"
                     );
             });
         }

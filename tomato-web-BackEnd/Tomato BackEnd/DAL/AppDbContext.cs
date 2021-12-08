@@ -13,9 +13,10 @@ namespace Tomato_BackEnd.DAL
         {
 
         }
-        public DbSet<AboutStory> AboutStory { get; set; }
-        public DbSet<SpecialService> SpecialService { get; set; }
-        public DbSet<AboutTeam> AboutTeams { get; set; }
-
+        public virtual DbSet<AboutStory> AboutStory { get; set; }
+        public virtual DbSet<SpecialService> SpecialService { get; set; }
+        public virtual DbSet<AboutTeam> AboutTeams { get; set; }
+        public virtual DbSet<AboutTestimonial> AboutTestimonials { get; set; }
+        public virtual  DbSet<Settings> Settings { get; set; }
     }
 }

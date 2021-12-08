@@ -105,41 +105,18 @@
         <div class="container">
             <div class="row">
                 <div class="trusted-slider">
-                    <div class="trusted-content">
-                        <img src="~/images/quote.png" alt="quote image" />
-                        <p class="quote-body">
-                            The world’s a big, big stage for this notorious deli smack in the middle of the theatre district, infamously famous for its over-the-top corned beef and pastrami sandwiches, chopped liver, blintzes, celebrities, salami, smoked fish and New York’s finest
-                            cheesecake.
-                        </p>
-                        <p class="quote-author">
-                            Anthony Reed,
-                            <span>New York</span>
-                        </p>
-                    </div>
-
-                    <div class="trusted-content">
-                        <img src="~/images/quote.png" alt="quote image" />
-                        <p class="quote-body">
-                            The world’s a big, big stage for this notorious deli smack in the middle of the theatre district, infamously famous for its over-the-top corned beef and pastrami sandwiches, chopped liver, blintzes, celebrities, salami, smoked fish and New York’s finest
-                            cheesecake.
-                        </p>
-                        <p class="quote-author">
-                            Anthony Reed,
-                            <span>New York</span>
-                        </p>
-                    </div>
-
-                    <div class="trusted-content">
-                        <img src="~/images/quote.png" alt="quote image" />
-                        <p class="quote-body">
-                            The world’s a big, big stage for this notorious deli smack in the middle of the theatre district, infamously famous for its over-the-top corned beef and pastrami sandwiches, chopped liver, blintzes, celebrities, salami, smoked fish and New York’s finest
-                            cheesecake.
-                        </p>
-                        <p class="quote-author">
-                            Anthony Reed,
-                            <span>New York</span>
-                        </p>
-                    </div>
+                    @foreach (var testimonial in Model.AboutTestimonials)
+                    {
+                        <div class="trusted-content">
+                            <img src="~/images/quote.png" alt="quote image" />
+                            <p class="quote-body">
+                                @testimonial.QuoteBody
+                            </p>
+                            <p class="quote-author">
+                                @Html.Raw(testimonial.QuoteAuthor)
+                            </p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

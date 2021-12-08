@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,17 +41,13 @@
                 <div class="nav-links">
                     <ul>
                         <li class="nav-item">
-                            <a href="home.html" class="nav-link">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link">
                                 Home
                                 <i class="fas fa-caret-down"></i>
                             </a>
                             <div class="dropdown">
                                 <ul>
-                                    <li class="dropdown-link"><a href="#">home-image</a></li>
-                                    <li class="dropdown-link"><a href="#">home-header slider</a></li>
-                                    <li class="dropdown-link"><a href="#">home-video background</a></li>
-                                    <li class="dropdown-link"><a href="#">home-parallax</a></li>
-                                    <li class="dropdown-link"><a href="#">home-scroll animation</a></li>
+                                    <li class="dropdown-link"><a asp-controller="Home" asp-action="Index">home-image</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -61,126 +59,48 @@
                             <div class="dropdown">
                                 <ul>
                                     <li class="dropdown-link"><a href="#">menu-list</a></li>
-                                    <li class="dropdown-link"><a href="#">menu-overlay</a></li>
-                                    <li class="dropdown-link"><a href="#">menu-tile</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="reservation.html" class="nav-link">
+                            <a asp-controller="Reservation" asp-action="Index" class="nav-link">
                                 reservation
                                 <i class="fas fa-caret-down"></i>
                             </a>
                             <div class="dropdown">
                                 <ul>
-                                    <li class="dropdown-link"><a href="reservation.html">reservation</a></li>
-                                    <li class="dropdown-link"><a href="#">reservation-opentable</a></li>
+                                    <li class="dropdown-link"><a asp-controller="Reservation" asp-action="Index">reservation</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a asp-controller="About" asp-action="index" class="nav-link">
                                 pages
                                 <i class="fas fa-caret-down"></i>
                             </a>
                             <div class="dropdown">
                                 <ul>
-                                    <li class="dropdown-link"><a href="about.html">about</a></li>
-                                    <li class="dropdown-link"><a href="#">gallery</a></li>
-                                    <li class="dropdown-link"><a href="#">shortcodes</a></li>
-                                    <li class="dropdown-link"><a href="#">login/signup</a></li>
-                                    <li class="dropdown-link"><a href="#">404 page</a></li>
+                                    <li class="dropdown-link"><a asp-controller="About" asp-action="index" >about</a></li>
+                                    <li class="dropdown-link"><a asp-controller="Account" asp-action="index" >login/signup</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                recipe
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link"><a href="#">recipe-2col</a></li>
-                                    <li class="dropdown-link"><a href="#">recipe-3col</a></li>
-                                    <li class="dropdown-link"><a href="#">recipe-4col</a></li>
-                                    <li class="dropdown-link"><a href="#">recipe-masonry</a></li>
-                                    <li class="dropdown-link">
-                                        <a href="#">
-                                            recipe-single
-                                            <i class="fas fa-caret-right"></i>
-                                        </a>
-                                        <div class="dropdown second">
-                                            <ul>
-                                                <li class="dropdown-link"><a href="~/#">recipe-image</a></li>
-                                                <li class="dropdown-link"><a href="~/#">recipe-gallery</a></li>
-                                                <li class="dropdown-link"><a href="~/#">recipe-video</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                blog
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li class="dropdown-link"><a href="#">blog-right sidebar</a></li>
-                                    <li class="dropdown-link"><a href="#">blog-left sidebar</a></li>
-                                    <li class="dropdown-link"><a href="#">blog-fullwidth</a></li>
-                                    <li class="dropdown-link"><a href="#">blog-masonry</a></li>
-                                    <li class="dropdown-link">
-                                        <a href="#">
-                                            blog-single
-                                            <i class="fas fa-caret-right"></i>
-                                        </a>
-                                        <div class="dropdown second">
-                                            <ul>
-                                                <li class="dropdown-link"><a href="#">blog-image</a></li>
-                                                <li class="dropdown-link"><a href="#">blog-gallery</a></li>
-                                                <li class="dropdown-link"><a href="#">blog-video</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a asp-controller="ProductList" asp-action="Index" class="nav-link">
                                 shop
                                 <i class="fas fa-caret-down"></i>
                             </a>
                             <div class="dropdown">
                                 <ul>
-                                    <li class="dropdown-link"><a href="#">shop-full</a></li>
-                                    <li class="dropdown-link"><a href="shop-sidebar.html">shop-left sidebar</a></li>
-                                    <li class="dropdown-link"><a href="#">shop-right sidebar</a></li>
-                                    <li class="dropdown-link">
-                                        <a href="#">
-                                            shop-single
-                                            <i class="fas fa-caret-right"></i>
-                                        </a>
-                                        <div class="dropdown second">
-                                            <ul>
-                                                <li class="dropdown-link"><a href="shop-full.html">shop-full</a></li>
-                                                <li class="dropdown-link"><a href="#">shop-left sidebar</a></li>
-                                                <li class="dropdown-link"><a href="#">shop-right sidebar</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="dropdown-link"><a href="#">shop-cart</a></li>
-                                    <li class="dropdown-link"><a href="#">shop-checkout</a></li>
-                                    <li class="dropdown-link"><a href="account.html">shop-account</a></li>
-                                    <li class="dropdown-link"><a href="#">shop-account detail</a></li>
+                                    <li class="dropdown-link"><a asp-controller="ProductList" asp-action="Index">shop-full</a></li>
+                                    <li class="dropdown-link"><a asp-controller="SingleProduct" asp-action="Index" >shop-single</a></li>
+                                    <li class="dropdown-link"><a asp-controller="Account" asp-action="Index" >shop-account</a></li>
                                 </ul>
                             </div>
                         </li>
 
                         <li class="nav-item m-right">
-                            <a href="contact.html" class="nav-link nav-link--2">Contact</a>
+                            <a asp-controller="Contact" asp-action="Index" class="nav-link nav-link--2">Contact</a>
                         </li>
 
                         <!-- shopping -->
@@ -254,26 +174,29 @@
                 <div class="col reach mb-3">
                     <h1>Reach us</h1>
 
-                    <div class="footer-social-icons">
-                        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.plus.google.com"><i class="fab fa-google-plus"></i></a>
-                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.vimeo.com"><i class="fab fa-vimeo"></i></a>
-                        <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
-                        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <div class="footer-adress">
-                        <p>
-                            <i class="fa fa-map-marker"></i> Baku , Azerbaycan ,
-                        </p>
-                        <p>
-                            <i class="fa fa-phone"></i> Phone: (415) 124-5678
-                        </p>
-                        <p>
-                            <i class="fa fa-envelope"></i> support@restaurant.com
-                        </p>
-                    </div>
+                    @foreach (var Setting in Model.Settings)
+                    {
+                        <div class="footer-social-icons">
+                            <a href="@Setting.Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="@Setting.Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="@Setting.Google"><i class="fab fa-google-plus"></i></a>
+                            <a href="@Setting.YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.vimeo.com"><i class="fab fa-vimeo"></i></a>
+                            <a href="@Setting.Pinteres"><i class="fab fa-pinterest"></i></a>
+                            <a href="@Setting.LinkIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <div class="footer-adress">
+                            <p>
+                                <i class="fa fa-map-marker"></i> @Setting.Location
+                            </p>
+                            <p>
+                                <i class="fa fa-phone"></i> Phone: @Setting.Phone
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope"></i> @Setting.Mail
+                            </p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

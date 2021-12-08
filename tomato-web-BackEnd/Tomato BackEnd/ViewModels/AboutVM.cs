@@ -8,9 +8,12 @@ namespace Tomato_BackEnd.ViewModels
 {
     public class AboutVM
     {
-        public AboutStory AboutStory { get; set; }
-        public List<SpecialService> SpecialServices { get; set; }
-        public List<AboutTeam> AboutTeams { get; set; }
+        public virtual AboutStory AboutStory { get; set; }
+        public virtual List<SpecialService> SpecialServices { get; set; }
+        public virtual List<AboutTeam> AboutTeams { get; set; }
+        public virtual List<AboutTestimonial> AboutTestimonials { get; set; }
+        public virtual List<Settings> Settings { get; set; }
+
 
     }
 }
