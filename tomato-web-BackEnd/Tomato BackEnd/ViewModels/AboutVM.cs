@@ -10,7 +10,7 @@ namespace Tomato_BackEnd.ViewModels
     {
         public AboutStory AboutStory { get; set; }
         public List<SpecialService> SpecialServices { get; set; }
-
+        public List<AboutTeam> AboutTeams { get; set; }
 
     }
 }
