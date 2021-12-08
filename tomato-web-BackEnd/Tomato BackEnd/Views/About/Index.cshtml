@@ -47,29 +47,14 @@
 
         <div class="row">
             <div class="slick-slider services-slider">
-                <div class="services-content">
-                    <img src="~/images/cake.png" alt="" class="center-block" />
-                    <h4 class="">Birthday Party</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-
-                <div class="services-content">
-                    <img src="~/images/wedding.png" alt="" class="center-block" />
-                    <h4 class="">Wedding party</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-
-                <div class="services-content">
-                    <img src="~/images/cake.png" alt="" class="center-block" />
-                    <h4 class="">Birthday Party</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-
-                <div class="services-content">
-                    <img src="~/images/wedding.png" alt="" class="center-block" />
-                    <h4 class="">Wedding Party</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
+                @foreach (var item in Model.SpecialServices)
+                {
+                    <div class="services-content">
+                        <img src="~/images/@item.ServiceIMg" alt="" class="center-block" />
+                        <h4 class="">@item.ServiceTitle</h4>
+                        <p>@item.ServiceDesc</p>
+                    </div>
+                }
             </div>
         </div>
     </div>

@@ -9,6 +9,8 @@ namespace Tomato_BackEnd.ViewModels
     public class AboutVM
     {
         public AboutStory AboutStory { get; set; }
+        public List<SpecialService> SpecialServices { get; set; }
+
 
     }
 }

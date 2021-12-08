@@ -20,7 +20,8 @@ namespace Tomato_BackEnd.Controllers
         {
             AboutVM aboutVM = new AboutVM()
             {
-                AboutStory = await _context.AboutStory.FirstOrDefaultAsync()
+                AboutStory = await _context.AboutStory.FirstOrDefaultAsync(),
+                SpecialServices = await _context.SpecialService.ToListAsync()
             };
             return View(aboutVM);
         }
