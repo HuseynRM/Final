@@ -1,2 +1,3 @@
 # Final
-Final FrontEnd
+Code Academy Final Project
+Full Stack
