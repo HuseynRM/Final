@@ -8631,11 +8631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Рабочий стол\\Tomato BackEnd\\Tomato BackEnd\\Tomato BackEnd.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Рабочий стол\\Final\\tomato-web-BackEnd\\Tomato BackEnd\\Tomato BackEnd.csproj",
       "projectName": "Tomato BackEnd",
-      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Рабочий стол\\Tomato BackEnd\\Tomato BackEnd\\Tomato BackEnd.csproj",
+      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Рабочий стол\\Final\\tomato-web-BackEnd\\Tomato BackEnd\\Tomato BackEnd.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Рабочий стол\\Tomato BackEnd\\Tomato BackEnd\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Рабочий стол\\Final\\tomato-web-BackEnd\\Tomato BackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

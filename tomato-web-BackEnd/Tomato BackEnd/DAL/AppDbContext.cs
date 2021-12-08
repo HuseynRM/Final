@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tomato_BackEnd.Models;
 
 namespace Tomato_BackEnd.DAL
 {
@@ -12,6 +13,7 @@ namespace Tomato_BackEnd.DAL
         {
 
         }
+        public DbSet<AboutStory> AboutStory { get; set; }
 
     }
 }
