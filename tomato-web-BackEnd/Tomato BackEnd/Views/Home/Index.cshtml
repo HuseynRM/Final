@@ -1,4 +1,4 @@
-﻿
+﻿@model HomeVM 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -36,14 +36,14 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col hidden-sm about-photo">
-                                <div class="image-thumb"><img src="~/images/thumb1.png" alt="thumb image" class="img-responsive" data-mfp-src="images/pic1-full.jpg" /></div>
+                                <div class="image-thumb"><img src="~/images/@Model.RestaurantHome.HomeImg" alt="thumb image" class="img-responsive" data-mfp-src="images/pic1-full.jpg" /></div>
                             </div>
                             <div class="row-2 d-flex grid-m-2">
                                 <div class="col about-photo hidden-xs">
-                                    <img src="~/images/thumb2.png" alt="thumb image" class="img-responsive" data-mfp-src="images/pic2-full.jpg" />
+                                    <img src="~/images/@Model.RestaurantHome.HomeImg1" alt="thumb image" class="img-responsive" data-mfp-src="images/pic2-full.jpg" />
                                 </div>
                                 <div class="col about-photo hidden-xs">
-                                    <img src="~/images/thumb3.png" alt="thumb image" class="img-responsive" data-mfp-src="images/pic3-full.jpg" />
+                                    <img src="~/images/@Model.RestaurantHome.HomeImg2" alt="thumb image" class="img-responsive" data-mfp-src="images/pic3-full.jpg" />
                                 </div>
                             </div>
                         </div>
@@ -51,11 +51,10 @@
                 </div>
                 <div class="col-sp">
                     <p>
-                        Cras ut viverra eros. Phasellus sollicitudin sapien id luctus tempor. Sed hend rerit inter dum sagittis. Donec nunc lacus, dapibus nec interdum eget, ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in
-                        diam dapibus sagittis. In massa est, dignissim in libero ac, fringilla ornare mi. Etiam interdum ligula purus.
+                        @Model.RestaurantHome.Info1
                     </p>
-                    <p>Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. In massa est, dignissim in libero ac, fringilla ornare.</p>
-                    <img src="~/images/signature.png" alt="signature" />
+                    <p>@Model.RestaurantHome.Info2</p>
+                    <img src="~/images/@Model.RestaurantHome.Signature" alt="signature" />
                 </div>
             </div>
         </div>
@@ -88,74 +87,23 @@
                             </div>
                         </div>
                         <ul class="slides">
-                            <li class="list">
-                                <div class="slider-image">
-                                    <img src="~/images/thumb4.png" alt="thumb image" />
-                                </div>
-                                <div class="slider-content">
-                                    <div class="section-header">
-                                        <h1 class="heading-2">3 Pancake with Caramel</h1>
-                                        <p class="text-2">If you are a fan of caramel cake, then you'll love our Pancake with caramel icecream. It's not thick, but very tasty.</p>
+                            @foreach (var special in Model.HomeSpecials)
+                            {
+                                <li class="list">
+                                    <div class="slider-image">
+                                        <img src="~/images/@special.SepialImg" alt="thumb image" />
                                     </div>
-                                    <p>
-                                        Ultrices In massa est, dignissim in libero ac, fringilla ornare mi.Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. accumsan, habitant morbi tristique senectus et netus et malesuada
-                                        fames ac turpis egestas.
-                                    </p>
-                                    <a href="" class="btn btn-primary">Order now</a>
-                                    <a href="" class="btn btn-secondary">Add to cart</a>
-                                </div>
-                            </li>
-                            <li class="list">
-                                <div class="slider-image">
-                                    <img src="~/images/thumb4.png" alt="thumb image" />
-                                </div>
-                                <div class="slider-content">
-                                    <div class="section-header">
-                                        <h1 class="heading-2">3 Pancake with Caramel</h1>
-                                        <p class="text-2">If you are a fan of caramel cake, then you'll love our Pancake with caramel icecream. It's not thick, but very tasty.</p>
+                                    <div class="slider-content">
+                                        <div class="section-header">
+                                            <h1 class="heading-2">@special.SpecialName</h1>
+                                            <p class="text-2">@special.Text</p>
+                                        </div>
+                                        <p>
+                                            @special.Text1
+                                        </p>
                                     </div>
-                                    <p>
-                                        Ultrices In massa est, dignissim in libero ac, fringilla ornare mi.Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. accumsan, habitant morbi tristique senectus et netus et malesuada
-                                        fames ac turpis egestas.
-                                    </p>
-                                    <a href="" class="btn btn-primary">Order now</a>
-                                    <a href="" class="btn btn-secondary">Add to cart</a>
-                                </div>
-                            </li>
-                            <li class="list">
-                                <div class="slider-image">
-                                    <img src="~/images/thumb4.png" alt="thumb image" />
-                                </div>
-                                <div class="slider-content">
-                                    <div class="section-header">
-                                        <h1 class="heading-2">3 Pancake with Caramel</h1>
-                                        <p class="text-2">If you are a fan of caramel cake, then you'll love our Pancake with caramel icecream. It's not thick, but very tasty.</p>
-                                    </div>
-                                    <p>
-                                        Ultrices In massa est, dignissim in libero ac, fringilla ornare mi.Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. accumsan, habitant morbi tristique senectus et netus et malesuada
-                                        fames ac turpis egestas.
-                                    </p>
-                                    <a href="" class="btn btn-primary">Order now</a>
-                                    <a href="" class="btn btn-secondary">Add to cart</a>
-                                </div>
-                            </li>
-                            <li class="list">
-                                <div class="slider-image">
-                                    <img src="~/images/thumb4.png" alt="thumb image" />
-                                </div>
-                                <div class="slider-content">
-                                    <div class="section-header">
-                                        <h1 class="heading-2">3 Pancake with Caramel</h1>
-                                        <p class="text-2">If you are a fan of caramel cake, then you'll love our Pancake with caramel icecream. It's not thick, but very tasty.</p>
-                                    </div>
-                                    <p class="text-sm">
-                                        Ultrices In massa est, dignissim in libero ac, fringilla ornare mi.Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. accumsan, habitant morbi tristique senectus et netus et malesuada
-                                        fames ac turpis egestas.
-                                    </p>
-                                    <a href="" class="btn btn-primary">Order now</a>
-                                    <a href="" class="btn btn-secondary">Add to cart</a>
-                                </div>
-                            </li>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>

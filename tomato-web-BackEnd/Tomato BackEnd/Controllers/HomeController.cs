@@ -20,7 +20,9 @@ namespace Tomato_BackEnd.Controllers
         {
             HomeVM homeVM = new HomeVM()
             {
-                Settings = await _context.Settings.ToListAsync()
+                Settings = await _context.Settings.ToListAsync(),
+                RestaurantHome = await _context.RestaurantHomes.FirstOrDefaultAsync(),
+                HomeSpecials = await _context.HomeSpecials.ToListAsync()
             };
             return View(homeVM);
         }
