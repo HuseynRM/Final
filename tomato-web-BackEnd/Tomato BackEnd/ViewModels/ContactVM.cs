@@ -9,5 +9,7 @@ namespace Tomato_BackEnd.ViewModels
     public class ContactVM
     {
         public virtual List<Settings> Settings { get; set; }
+        public Contact Contact { get; set; }
+
     }
 }

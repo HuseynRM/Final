@@ -1,4 +1,4 @@
-﻿
+﻿@model ContactVM
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -50,20 +50,25 @@
                 </div>
             </div>
             <div class="col col-2">
-                <form action="#" class="form" id="contactForm">
+                <form asp-action="getcontact" asp-controller="contact" method="post" class="form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Full Name" id="name" required="required" />
+                        <input type="text" asp-for="@Model.Contact.FullName" class="form-control" placeholder="Full Name" id="name" required="required" />
+                        <span asp-validation-for="@Model.Contact.FullName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email Address" required="required" />
+                        <input type="email" asp-for="@Model.Contact.Mail" class="form-control" id="email" placeholder="Email Address" required="required" />
+                        <span asp-validation-for="@Model.Contact.Mail" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" required="required" id="subject" />
+                        <input type="text" asp-for="@Model.Contact.Subject" class="form-control" placeholder="Subject" required="required" id="subject" />
+                        <span asp-validation-for="@Model.Contact.Subject" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Message" rows="5" class="form-control"></textarea>
+                        <textarea type="text" asp-for="@Model.Contact.Message" class="form-control" rows="10" placeholder="Message"></textarea>
+                        <span asp-validation-for="@Model.Contact.Message" class="text-danger"></span>
                     </div>
-                    <button class="btn btn-primary btn-lg">Send message</button>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <button type="submit" class="btn btn-primary btn-lg">Send message</button>
                 </form>
             </div>
         </div>

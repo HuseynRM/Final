@@ -30,6 +30,7 @@ namespace Tomato_BackEnd
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +40,7 @@ namespace Tomato_BackEnd
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
 
