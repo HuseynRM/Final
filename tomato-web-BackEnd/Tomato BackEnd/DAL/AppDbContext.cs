@@ -20,7 +20,7 @@ namespace Tomato_BackEnd.DAL
         public virtual  DbSet<Settings> Settings { get; set; }
         public virtual DbSet<RestaurantHome> RestaurantHomes { get; set; }
         public virtual DbSet<HomeSpecial> HomeSpecials { get; set; }
-
+        public virtual DbSet<Features> Features { get; set; }
 
     }
 }

@@ -195,66 +195,24 @@
                 </div>
             </div>
             <div class="row grid grid-ds grid-md grid-xs">
-                <div class="col">
-                    <div class="features-tile">
-                        <div class="features-img">
-                            <img src="~/images/thumb5.png" alt="thumb image" />
-                        </div>
-                        <div class="features-content">
-                            <div class="section-header">
-                                <h1 class="heading-2">Serving with love</h1>
+                @foreach (var feature in Model.Features)
+                {
+                    <div class="col">
+                        <div class="features-tile">
+                            <div class="features-img">
+                                <img src="~/images/@feature.FeatureImg" alt="thumb image" />
                             </div>
-                            <p>
-                                Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu, maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
-                            </p>
+                            <div class="features-content">
+                                <div class="section-header">
+                                    <h1 class="heading-2">@feature.Name</h1>
+                                </div>
+                                <p>
+                                    @feature.Desc
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="features-tile">
-                        <div class="features-img">
-                            <img src="~/images/thumb6.png" alt="thumb image" />
-                        </div>
-                        <div class="features-content">
-                            <div class="section-header">
-                                <h1 class="heading-2">Serving with love</h1>
-                            </div>
-                            <p>
-                                Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu, maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="features-tile">
-                        <div class="features-img">
-                            <img src="~/images/thumb7.png" alt="thumb image" />
-                        </div>
-                        <div class="features-content">
-                            <div class="section-header">
-                                <h1 class="heading-2">Serving with love</h1>
-                            </div>
-                            <p>
-                                Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu, maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col visible-sm">
-                    <div class="features-tile">
-                        <div class="features-img">
-                            <img src="~/images/thumb7.png" alt="thumb image" />
-                        </div>
-                        <div class="features-content">
-                            <div class="section-header">
-                                <h1 class="heading-2">Serving with love</h1>
-                            </div>
-                            <p>
-                                Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi. Nam urna arcu, maximus eget ex nec, consequat pellentesque enim. Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section>
@@ -306,39 +264,18 @@
             <div class="container">
                 <div class="row">
                     <div class="trusted-slider">
-                        <div class="trusted-content">
-                            <img src="~/images/quote.png" alt="quote image" />
-                            <p class="quote-body">
-                                The world’s a big, big stage for this notorious deli smack in the middle of the theatre district, infamously famous for its over-the-top corned beef and pastrami sandwiches, chopped liver, blintzes, celebrities, salami, smoked fish and New York’s finest
-                                cheesecake.
-                            </p>
-                            <p class="quote-author">
-                                Anthony Reed,
-                                <span>New York</span>
-                            </p>
-                        </div>
-                        <div class="trusted-content">
-                            <img src="~/images/quote.png" alt="quote image" />
-                            <p class="quote-body">
-                                The world’s a big, big stage for this notorious deli smack in the middle of the theatre district, infamously famous for its over-the-top corned beef and pastrami sandwiches, chopped liver, blintzes, celebrities, salami, smoked fish and New York’s finest
-                                cheesecake.
-                            </p>
-                            <p class="quote-author">
-                                Anthony Reed,
-                                <span>New York</span>
-                            </p>
-                        </div>
-                        <div class="trusted-content">
-                            <img src="~/images/quote.png" alt="quote image" />
-                            <p class="quote-body">
-                                The world’s a big, big stage for this notorious deli smack in the middle of the theatre district, infamously famous for its over-the-top corned beef and pastrami sandwiches, chopped liver, blintzes, celebrities, salami, smoked fish and New York’s finest
-                                cheesecake.
-                            </p>
-                            <p class="quote-author">
-                                Anthony Reed,
-                                <span>New York</span>
-                            </p>
-                        </div>
+                        @foreach (var quote in Model.AboutTestimonial)
+                        {
+                            <div class="trusted-content">
+                                <img src="~/images/quote.png" alt="quote image" />
+                                <p class="quote-body">
+                                    @quote.QuoteBody
+                                </p>
+                                <p class="quote-author">
+                                    @Html.Raw(quote.QuoteAuthor)
+                                </p>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

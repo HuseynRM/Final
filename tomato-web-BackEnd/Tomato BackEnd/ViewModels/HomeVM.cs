@@ -11,6 +11,8 @@ namespace Tomato_BackEnd.ViewModels
         public virtual List<Settings> Settings { get; set; }
         public RestaurantHome RestaurantHome { get; set; }
         public List<HomeSpecial> HomeSpecials { get; set; }
+        public List<Features> Features { get; set; }
+        public List<AboutTestimonial> AboutTestimonial { get; set; }
 
     }
 }
