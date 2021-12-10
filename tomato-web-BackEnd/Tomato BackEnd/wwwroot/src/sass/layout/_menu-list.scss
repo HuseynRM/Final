@@ -1,0 +1,84 @@
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.menu {
+    padding-bottom: 30px;
+    .container {
+        width: 100%;
+    }
+
+    &-tags {
+        text-align: center;
+        margin-bottom: 20px;
+        span {
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            color: #828281;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 8px 4px;
+            padding-block: 2px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            display: inline-block;
+            @include mq(md) {
+                font-size: 18px;
+                margin: 0 20px;
+            }
+        }
+        .tagsort-active {
+            border-bottom: 3px solid var(--color-gold);
+            color: var(--gray);
+        }
+    }
+}
+
+.menu {
+    .food-menu {
+        .menu-item {
+            overflow: hidden;
+            margin: 15px 0;
+            padding-left: 10px;
+            border-left: 3px solid #fff;
+
+            .menu-wrapper {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                justify-content: space-between;
+            }
+            p {
+                font-size: 18px;
+            }
+            h4 {
+                text-align: left;
+                margin: 5px 0;
+                font-size: 18px !important;
+                padding-right: 10px;
+                background: #fff;
+            }
+            .price {
+                padding-left: 10px;
+                line-height: 19.8px;
+                margin: 5px 0;
+                background: #fff none repeat scroll 0% 0%;
+                font-family: 'Josefin sans', sans-serif;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            .dotted-bg {
+                border-top: 2px dotted #ccc;
+                position: absolute;
+                left: 0;
+                top: 15px;
+                width: 100%;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.menu-btn {
+    padding: 20px 0;
+}
