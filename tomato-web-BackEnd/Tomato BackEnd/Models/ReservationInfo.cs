@@ -8,7 +8,6 @@ namespace Tomato_BackEnd.Models
 {
     public class ReservationInfo:BaseEntity
     {
-        
         public string Time { get; set; }
         [Required]
         [StringLength(maximumLength:4000)]
@@ -24,6 +23,5 @@ namespace Tomato_BackEnd.Models
         [StringLength(maximumLength: 4000)]
         [EmailAddress(ErrorMessage = "E-Mail yazin !!!")]
         public string Mail { get; set; }
-
     }
 }

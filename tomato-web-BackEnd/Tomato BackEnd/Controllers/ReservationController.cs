@@ -30,10 +30,10 @@ namespace Tomato_BackEnd.Controllers
         }
         public IActionResult GetReservation(ReservationInfo reservationInfo)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return RedirectToAction("index");
-            //}
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("index");
+            }
             _context.ReservationInfo.Add(reservationInfo);
             _context.SaveChanges();
             return RedirectToAction("index");
