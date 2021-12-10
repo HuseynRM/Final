@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tomato_BackEnd.DAL;
 
 namespace Tomato_BackEnd.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211210062230_AddedReservationTable_1")]
+    partial class AddedReservationTable_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -172,43 +174,6 @@ namespace Tomato_BackEnd.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("HomeSpecials");
-                });
-
-            modelBuilder.Entity("Tomato_BackEnd.Models.ReservationInfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(4000)")
-                        .HasMaxLength(4000);
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(4000)")
-                        .HasMaxLength(4000);
-
-                    b.Property<int>("GuestCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Mail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(4000)")
-                        .HasMaxLength(4000);
-
-                    b.Property<string>("Number")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Time")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ReservationInfo");
                 });
 
             modelBuilder.Entity("Tomato_BackEnd.Models.RestaurantHome", b =>

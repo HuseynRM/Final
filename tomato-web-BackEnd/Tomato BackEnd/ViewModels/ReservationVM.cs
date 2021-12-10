@@ -9,6 +9,8 @@ namespace Tomato_BackEnd.ViewModels
     public class ReservationVM
     {
         public virtual List<Settings> Settings { get; set; }
+        public ReservationInfo ReservationInfo { get; set; }
+
 
     }
 }

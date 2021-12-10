@@ -1,4 +1,4 @@
-﻿
+﻿@model ReservationVM 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -23,57 +23,62 @@
             </div>
         </div>
         <div class="reservation-form">
-            <form action="#" class="form">
+            <form asp-action="GetReservation" asp-controller="Reservation" method="post"  class="form">
                 <div class="row grid-2">
                     <div class="col">
                         <div class="form-group">
-                            <label for="datepicker">Date</label>
-                            <input type="text" data-toggle="datepicker" class="form-control" placeholder="Pick a date" id="datepicker" title="Please choose a date" required />
+                            <label for="datepicker" asp-for="@Model.ReservationInfo.Date" >Date</label>
+                            <input type="text" asp-for="@Model.ReservationInfo.Date" data-toggle="datepicker" class="form-control" placeholder="Pick a date" id="datepicker" title="Please choose a date" required />
                             <i class="fa fa-calendar"></i>
+                            <span asp-validation-for="@Model.ReservationInfo.Date" class="text-danger"></span>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" class="form-control" placeholder="Full Name" id="name" title="Your full name please" required />
+                            <label for="name" asp-for="@Model.ReservationInfo.FullName">Your Name</label>
+                            <input type="text" asp-for="@Model.ReservationInfo.FullName" class="form-control" placeholder="Full Name" id="name" title="Your full name please" required />
                             <i class="fa fa-pencil-square"></i>
+                            <span asp-validation-for="@Model.ReservationInfo.FullName" class="text-danger"></span>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="form-group">
-                            <label for="timepicker">Time</label>
-                            <input type="text" class="form-control" placeholder="Pick a time" id="timepicker" title="Choose preferred time" name="time" required value="" />
+                            <label for="timepicker" asp-for="@Model.ReservationInfo.Time">Time</label>
+                            <input type="text" asp-for="@Model.ReservationInfo.Time" class="form-control" placeholder="Pick a time" id="timepicker" title="Choose preferred time" name="time" required value="" />
                             <i class="fa fa-clock"></i>
+                            <span asp-validation-for="@Model.ReservationInfo.Time" class="text-danger"></span>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" placeholder="Your Email ID" id="email" title="Please enter your email ID" required />
+                            <label for="email" asp-for="@Model.ReservationInfo.Mail">Email Address</label>
+                            <input type="email" asp-for="@Model.ReservationInfo.Mail" class="form-control" placeholder="Your Email ID" id="email" title="Please enter your email ID" required />
                             <i class="fa fa-envelope"></i>
+                            <span asp-validation-for="@Model.ReservationInfo.Mail" class="text-danger"></span>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="form-group">
-                            <label for="guests">Guests</label>
-                            <input type="number" class="form-control input-number–noSpinners" placeholder="How many of you" id="guests" title="Please enter number of guests" required />
+                            <label for="guests" asp-for="@Model.ReservationInfo.GuestCount">Guests</label>
+                            <input type="number" asp-for="@Model.ReservationInfo.GuestCount" class="form-control input-number–noSpinners" placeholder="How many of you" id="guests" title="Please enter number of guests" required />
                             <i class="fa fa-user"></i>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="text" class="form-control" placeholder="Enter your phone number" id="datepicker" title="Please enter your phone number" required />
+                            <label for="phone" asp-for="@Model.ReservationInfo.Number">Phone Number</label>
+                            <input type="text" asp-for="@Model.ReservationInfo.Number" class="form-control" placeholder="Enter your phone number" id="datepicker" title="Please enter your phone number" required />
                             <i class="fa fa-phone"></i>
                         </div>
                     </div>
                 </div>
                 <div class="col-grid">
                     <div class="reservation-btn">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <button type="submit" class="btn btn-primary btn-lg">Make Reservation</button>
                     </div>
                 </div>
