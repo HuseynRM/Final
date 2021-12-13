@@ -23,5 +23,7 @@ namespace Tomato_BackEnd.DAL
         public virtual DbSet<Features> Features { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual  DbSet<ReservationInfo> ReservationInfo { get; set; }
+        public virtual DbSet<ShopCatagory> ShopCatagories { get; set; }
+        public virtual DbSet<ShopList> ShopLists { get; set; }
     }
 }

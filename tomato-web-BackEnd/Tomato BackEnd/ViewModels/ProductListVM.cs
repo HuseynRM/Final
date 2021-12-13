@@ -9,5 +9,7 @@ namespace Tomato_BackEnd.ViewModels
     public class ProductListVM
     {
         public virtual  List<Settings> Settings { get; set; }
+        public virtual List<ShopCatagory> ShopShopCatagorys { get; set; }
+        public virtual List<ShopList> ShopLists { get; set; }
     }
 }

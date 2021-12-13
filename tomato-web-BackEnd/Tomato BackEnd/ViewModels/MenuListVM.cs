@@ -9,5 +9,7 @@ namespace Tomato_BackEnd.ViewModels
     public class MenuListVM
     {
         public virtual List<Settings> Settings { get; set; }
+      
+
     }
 }

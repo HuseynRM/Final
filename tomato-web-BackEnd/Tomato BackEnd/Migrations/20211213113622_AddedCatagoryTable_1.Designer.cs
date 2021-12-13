@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tomato_BackEnd.DAL;
 
 namespace Tomato_BackEnd.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211213113622_AddedCatagoryTable_1")]
+    partial class AddedCatagoryTable_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -311,34 +313,6 @@ namespace Tomato_BackEnd.Migrations
                     b.ToTable("ShopCatagories");
                 });
 
-            modelBuilder.Entity("Tomato_BackEnd.Models.ShopList", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FName")
-                        .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
-
-                    b.Property<string>("Img")
-                        .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(5000);
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ShopCatagoryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ShopCatagoryId");
-
-                    b.ToTable("ShopLists");
-                });
-
             modelBuilder.Entity("Tomato_BackEnd.Models.SpecialService", b =>
                 {
                     b.Property<int>("Id")
@@ -361,15 +335,6 @@ namespace Tomato_BackEnd.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SpecialService");
-                });
-
-            modelBuilder.Entity("Tomato_BackEnd.Models.ShopList", b =>
-                {
-                    b.HasOne("Tomato_BackEnd.Models.ShopCatagory", "ShopCatagory")
-                        .WithMany("ShopLists")
-                        .HasForeignKey("ShopCatagoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

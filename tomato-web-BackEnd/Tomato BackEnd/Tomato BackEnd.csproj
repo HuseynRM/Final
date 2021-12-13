@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20211213112738_AddedShopListandCatagoryTable_1.cs" />
+    <Compile Remove="Migrations\20211213112738_AddedShopListandCatagoryTable_1.Designer.cs" />
+    <Compile Remove="Migrations\20211213113429_AddedCatagoryTable_2.cs" />
+    <Compile Remove="Migrations\20211213113429_AddedCatagoryTable_2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
