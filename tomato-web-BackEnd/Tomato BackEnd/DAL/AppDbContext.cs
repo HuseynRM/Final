@@ -25,5 +25,8 @@ namespace Tomato_BackEnd.DAL
         public virtual  DbSet<ReservationInfo> ReservationInfo { get; set; }
         public virtual DbSet<ShopCatagory> ShopCatagories { get; set; }
         public virtual DbSet<ShopList> ShopLists { get; set; }
+        public virtual DbSet<MenuCatagory> MenuCatagories { get; set; }
+        public virtual DbSet<MenuList> MenuLists { get; set; }
+
     }
 }
