@@ -29,96 +29,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="menu-tags">
-                        <span data-filter="*" class="tagsort-active">All</span>
-                        <span data-filter=".starter">starters</span>
-                        <span data-filter=".breakfast">breakfast</span>
-                        <span data-filter=".lunch">lunch</span>
-                        <span data-filter=".dinner">dinner</span>
-                        <span data-filter=".desserts">desserts</span>
+                        @foreach (var item in Model.MenuCatagories)
+                        {
+                            <span data-filter="*" class="tagsort-active">@item.Name</span>
+                        }
                     </div>
                 </div>
             </div>
             <div class="row menu-items">
-                <div class="menu-item col-sm-6 col-xs-12 starter dinner desserts">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
+                @foreach (var item in Model.MenuLists)
+                {
+                    <div class="menu-item col-sm-6 col-xs-12 starter dinner desserts">
+                        <div class="menu-wrapper">
+                            <h4>@item.Name</h4>
+                            <span class="price">$@item.Price</span>
+                            <div class="dotted-bg"></div>
+                        </div>
+                        <p>@item.Desc</p>
                     </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 starter">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 breakfast desserts starter">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 breakfast">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 lunch starter breakfast">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 lunch">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 dinner breakfast lunch">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 dinner">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 desserts lunch dinner">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
-                <div class="menu-item col-sm-6 col-xs-12 desserts">
-                    <div class="menu-wrapper">
-                        <h4>english asparagus</h4>
-                        <span class="price">$14.95</span>
-                        <div class="dotted-bg"></div>
-                    </div>
-                    <p>pellentesque enim. Aliquam tempor</p>
-                </div>
+                }
             </div>
         </div>
     </div>

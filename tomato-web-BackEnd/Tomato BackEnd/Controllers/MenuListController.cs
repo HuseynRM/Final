@@ -20,6 +20,8 @@ namespace Tomato_BackEnd.Controllers
         {
             MenuListVM menuListVM = new MenuListVM()
             {
+                MenuCatagories = await _context.MenuCatagories.ToListAsync(),
+                MenuLists = await _context.MenuLists.ToListAsync(),
                 Settings = await _context.Settings.ToListAsync()
             };
             return View(menuListVM);
