@@ -8,7 +8,8 @@ namespace Tomato_BackEnd.Models
 {
     public class ReservationInfo:BaseEntity
     {
-        public string Time { get; set; }
+        [Column(TypeName ="time")]
+        public TimeSpan Time { get; set; }
         [Required]
         [StringLength(maximumLength:4000)]
         public string FullName { get; set; }
