@@ -49,11 +49,15 @@ namespace Tomato_BackEnd.Controllers
 
             ProductListVM productListVM = new ProductListVM()
             {
-                ShopLists = await _context.ShopLists.ToListAsync(),
+                ShopLists = shopLists,
                 ShopShopCatagorys = await _context.ShopCatagories.Include(x => x.ShopLists).ToListAsync(),
                 Settings = await _context.Settings.ToListAsync()
             };
             return View(productListVM);
+        }
+        public async Task<IActionResult> Detail(int? id)
+        {
+            return View();
         }
     }
 }

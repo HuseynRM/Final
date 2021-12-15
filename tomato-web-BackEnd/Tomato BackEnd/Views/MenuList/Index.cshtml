@@ -29,9 +29,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="menu-tags">
+                        <span data-filter="*" class="tagsort-active">All</span>
+
                         @foreach (var item in Model.MenuCatagories)
                         {
-                            <span data-filter="*" class="tagsort-active">@item.Name</span>
+                            <span data-filter="@("."+item.Name)" class="tagsort-active">@item.Name</span>
                         }
                     </div>
                 </div>
@@ -39,7 +41,7 @@
             <div class="row menu-items">
                 @foreach (var item in Model.MenuLists)
                 {
-                    <div class="menu-item col-sm-6 col-xs-12 starter dinner desserts">
+                    <div class="menu-item col-sm-6 col-xs-12 @item.MenuCatagory.Name">
                         <div class="menu-wrapper">
                             <h4>@item.Name</h4>
                             <span class="price">$@item.Price</span>

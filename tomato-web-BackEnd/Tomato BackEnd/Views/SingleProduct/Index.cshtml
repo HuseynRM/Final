@@ -1,4 +1,4 @@
-﻿
+﻿@model SingleProductVM
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,56 +19,20 @@
         <div class="row flex-lg">
             <div class="col w-40-lg">
                 <div class="single-shop-carousel">
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
+                    @foreach (var item in Model.ProductSingles)
+                    {
+                        <div class="carousel-content">
+                            <img src="~/images/@item.Img" alt="carousel image" class="img-responsive" />
+                        </div>
+                    }
                 </div>
                 <div class="single-shop-carousel-nav">
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
+                    @foreach (var item in Model.ProductSingles)
+                    {
+                        <div class="carousel-content">
+                            <img src="~/images/@item.Img" alt="carousel image" class="img-responsive" />
+                        </div>
+                    }
                 </div>
             </div>
             <div class="col shop-single-info">
@@ -79,13 +43,6 @@
                     <div class="ssp">
                         $100
                         <span>$150</span>
-                    </div>
-                    <div class="rc-ratings">
-                        <span class="fa fa-star active"></span>
-                        <span class="fa fa-star active"></span>
-                        <span class="fa fa-star active"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
                     </div>
                 </div>
                 <p>

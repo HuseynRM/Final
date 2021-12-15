@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tomato_BackEnd.DAL;
 
 namespace Tomato_BackEnd.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211215100010_AddedSingleProduct_1")]
+    partial class AddedSingleProduct_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -249,8 +251,8 @@ namespace Tomato_BackEnd.Migrations
                     b.Property<double>("NewPrice")
                         .HasColumnType("float");
 
-                    b.Property<string>("OldPrice")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("OldPrice")
+                        .HasColumnType("float");
 
                     b.Property<string>("SingleDesc")
                         .HasColumnType("nvarchar(max)")
