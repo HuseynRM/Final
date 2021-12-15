@@ -31,8 +31,7 @@ namespace Tomato_BackEnd.Controllers
             }
             ProductListVM productListVM = new ProductListVM()
             {
-                ShopLists = ShopList,               
-                Settings = await _context.Settings.ToListAsync(),
+                ShopLists = ShopList,
                ShopCatagorys = await _context.ShopCatagories.Include(x=>x.ShopLists).ToListAsync() 
             };
             return View(productListVM);

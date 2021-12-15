@@ -24,7 +24,7 @@ namespace Tomato_BackEnd.Controllers
         {
             ContactVM contactVM = new ContactVM() 
             { 
-                Settings = await _context.Settings.ToListAsync()
+               
             };
             return View(contactVM);
         }

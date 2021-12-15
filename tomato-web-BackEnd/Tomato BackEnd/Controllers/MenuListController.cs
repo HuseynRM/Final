@@ -22,7 +22,7 @@ namespace Tomato_BackEnd.Controllers
             {
                 MenuCatagories = await _context.MenuCatagories.ToListAsync(),
                 MenuLists = await _context.MenuLists.Include(x=>x.MenuCatagory).ToListAsync(),
-                Settings = await _context.Settings.ToListAsync()
+                
             };
             return View(menuListVM);
         }

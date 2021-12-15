@@ -24,7 +24,7 @@ namespace Tomato_BackEnd.Controllers
         {
             ReservationVM reservationVM = new ReservationVM()
             {
-                Settings = await _context.Settings.ToListAsync()
+                
             };
             return View(reservationVM);
         }

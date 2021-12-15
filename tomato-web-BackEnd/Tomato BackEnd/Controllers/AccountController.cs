@@ -20,7 +20,7 @@ namespace Tomato_BackEnd.Controllers
         {
             AccountVM accountVM = new AccountVM()
             {
-                Settings = await _context.Settings.ToListAsync()
+                
             };
             return View(accountVM);
         }
