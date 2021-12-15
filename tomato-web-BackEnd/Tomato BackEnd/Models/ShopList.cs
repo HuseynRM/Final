@@ -19,5 +19,8 @@ namespace Tomato_BackEnd.Models
         public double Price { get; set; }
         public ShopCatagory ShopCatagory { get; set; }
         public int ShopCatagoryId { get; set; }
+        public ProductSingle ProductSingle { get; set; }
+        public int? ProductSingleId { get; set; }
+
     }
 }

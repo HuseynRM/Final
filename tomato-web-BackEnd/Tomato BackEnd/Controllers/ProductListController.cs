@@ -17,53 +17,29 @@ namespace Tomato_BackEnd.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(int? categoryId, string search, int page = 1)
+        public async Task<IActionResult> Index(int? categoryId)
         {
-            ViewBag.SelectedPage = page;
-
-            ViewBag.SelectedPage = search;
-
-            int totalCount;
-
-            decimal totalPage;
-
-            List<ShopList> shopLists = new List<ShopList>();
-
-            if (categoryId==null)
+            var shopLists =  _context.ShopLists.AsQueryable();
+            if (categoryId != null)
             {
-                shopLists = await _context.ShopLists.Include(x => x.ShopCatagory).Where(x => string.IsNullOrWhiteSpace(search) ? true : (x.ShopCatagory.CName.ToLower().Contains(search.ToLower())))
-                .Skip((page - 1) * 6).Take(6).ToListAsync();
-                totalCount = _context.ShopLists.Include(x => x.ShopCatagory).Where(x => string.IsNullOrWhiteSpace(search) ? true : (x.ShopCatagory.CName.ToLower().Contains(search.ToLower()))).Count();
+                shopLists.Where(x => x.ShopCatagoryId == categoryId);
             }
-            else
-            {
-                ViewBag.SelectedCategoryId = categoryId;
-                shopLists = _context.ShopLists.Include(x => x.ShopCatagory).Where(x => string.IsNullOrWhiteSpace(search) ? true : (x.ShopCatagory.CName.ToLower().Contains(search.ToLower())))
-                .Where(x => x.ShopCatagoryId == categoryId).Skip((page - 1) * 6).Take(6).ToList();
-                totalCount = _context.ShopLists.Include(x => x.ShopCatagory).Where(x => string.IsNullOrWhiteSpace(search) ? true : (x.ShopCatagory.CName.ToLower().Contains(search.ToLower())))
-                .Where(x => x.ShopCatagoryId == categoryId).Count();
-            }
-            totalPage = Math.Ceiling(totalCount / 6m);
-
-            ViewBag.TotalPageCount = totalPage;
-
             ProductListVM productListVM = new ProductListVM()
             {
-                ShopLists = shopLists,
-                ShopShopCatagorys = await _context.ShopCatagories.Include(x => x.ShopLists).ToListAsync(),
-                Settings = await _context.Settings.ToListAsync()
+                ShopLists = await shopLists.Include(x => x.ShopCatagory).ToListAsync(),
+                Settings = await _context.Settings.ToListAsync(),
+               ShopCatagorys = await _context.ShopCatagories.Include(x=>x.ShopLists).ToListAsync() 
             };
             return View(productListVM);
         }
         public async Task<IActionResult> Detail(int? id)
         {
-            ProductSingle product = await _context.ProductSingles.FirstOrDefaultAsync(x=>x.Id==id);
-            ProductListVM productListVM = new ProductListVM()
+            ShopList shopList = await _context.ShopLists.Include(x=>x.ProductSingle).FirstOrDefaultAsync(x => x.Id == id);
+            if (shopList == null)
             {
-                Settings = await _context.Settings.ToListAsync(),
-                ProductSingle = product
-            };
-            return View(productListVM);
+                return NotFound();
+            }
+            return View(shopList);
         }
     }
 }

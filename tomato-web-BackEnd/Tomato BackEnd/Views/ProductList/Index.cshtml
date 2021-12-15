@@ -34,10 +34,10 @@
                 <div class="side-widget">
                     <h5>Our Food</h5>
                     <ul class="shop-cat">
-                        @foreach (var catagory in Model.ShopShopCatagorys)
+                        @foreach (var catagory in Model.ShopCatagorys)
                         {
                             <li>
-                                <a asp-controller="ProductList" asp-action="Index" asp-route-categoryId="@catagory.Id">
+                                <a asp-controller="productlist" asp-action="index" asp-route-categoryId="@catagory.Id">
                                     @catagory.CName (@catagory.ShopLists.Count())
                                     <i class="fa fa-caret-right"></i>
                                 </a>
