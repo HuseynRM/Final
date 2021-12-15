@@ -19,14 +19,19 @@ namespace Tomato_BackEnd.Controllers
         }
         public async Task<IActionResult> Index(int? categoryId)
         {
-            var shopLists =  _context.ShopLists.AsQueryable();
-            if (categoryId != null)
+            List<ShopList> ShopList = new List<ShopList>();
+            if (categoryId == null)
             {
-                shopLists.Where(x => x.ShopCatagoryId == categoryId);
+                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).ToListAsync();        
+            }
+            else
+            {
+                ViewBag.SelectedCategoryId = categoryId;
+                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).Where(x => x.ShopCatagoryId == categoryId).ToListAsync();
             }
             ProductListVM productListVM = new ProductListVM()
             {
-                ShopLists = await shopLists.Include(x => x.ShopCatagory).ToListAsync(),
+                ShopLists = ShopList,               
                 Settings = await _context.Settings.ToListAsync(),
                ShopCatagorys = await _context.ShopCatagories.Include(x=>x.ShopLists).ToListAsync() 
             };

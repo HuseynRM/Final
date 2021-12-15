@@ -60,7 +60,7 @@
                                     </div>
 
                                     <h4>
-                                        <a href="#">@Food.FName</a>
+                                        <a asp-controller="ProductList" asp-action="Detail" asp-route-id="@Food.Id">@Food.FName</a>
                                     </h4>
 
                                     <div class="product-price">$@Food.Price</div>

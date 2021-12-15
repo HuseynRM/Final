@@ -312,3 +312,5 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato B
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\MenuList\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\ProductList\Detail.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
