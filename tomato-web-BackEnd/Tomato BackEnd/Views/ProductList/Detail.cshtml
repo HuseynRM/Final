@@ -1,6 +1,6 @@
-﻿@model SingleProductVM
+﻿@model ProductListVM
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <section class="page-header">
@@ -19,20 +19,56 @@
         <div class="row flex-lg">
             <div class="col w-40-lg">
                 <div class="single-shop-carousel">
-                    @foreach (var item in Model.ProductSingles)
-                    {
-                        <div class="carousel-content">
-                            <img src="~/images/@item.Img" alt="carousel image" class="img-responsive" />
-                        </div>
-                    }
+                    <div class="carousel-content">
+                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
                 </div>
                 <div class="single-shop-carousel-nav">
-                    @foreach (var item in Model.ProductSingles)
-                    {
-                        <div class="carousel-content">
-                            <img src="~/images/@item.Img" alt="carousel image" class="img-responsive" />
-                        </div>
-                    }
+                    <div class="carousel-content">
+                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
+                    <div class="carousel-content">
+                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
+                    </div>
                 </div>
             </div>
             <div class="col shop-single-info">
@@ -43,6 +79,13 @@
                     <div class="ssp">
                         $100
                         <span>$150</span>
+                    </div>
+                    <div class="rc-ratings">
+                        <span class="fa fa-star active"></span>
+                        <span class="fa fa-star active"></span>
+                        <span class="fa fa-star active"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
                     </div>
                 </div>
                 <p>
@@ -74,8 +117,9 @@
             <div class="food-content">
                 <div class="food-pane">
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
+                        was popularised in the 1960s with the release of Letraset sheets containing.
                     </p>
                     <p class="list">
                         <span>
@@ -118,7 +162,8 @@
 
                         <div class="shop-meta">
                             <a href="">
-                                <i class="fa fa-shopping-cart"></i> Add to cart
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
                             </a>
                         </div>
                     </div>
@@ -143,7 +188,8 @@
 
                         <div class="shop-meta">
                             <a href="">
-                                <i class="fa fa-shopping-cart"></i> Add to cart
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
                             </a>
                         </div>
                     </div>
@@ -168,7 +214,8 @@
 
                         <div class="shop-meta">
                             <a href="">
-                                <i class="fa fa-shopping-cart"></i> Add to cart
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
                             </a>
                         </div>
                     </div>
@@ -193,7 +240,8 @@
 
                         <div class="shop-meta">
                             <a href="">
-                                <i class="fa fa-shopping-cart"></i> Add to cart
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
                             </a>
                         </div>
                     </div>

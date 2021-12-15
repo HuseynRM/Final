@@ -57,7 +57,13 @@ namespace Tomato_BackEnd.Controllers
         }
         public async Task<IActionResult> Detail(int? id)
         {
-            return View();
+            ProductSingle product = await _context.ProductSingles.FirstOrDefaultAsync(x=>x.Id==id);
+            ProductListVM productListVM = new ProductListVM()
+            {
+                Settings = await _context.Settings.ToListAsync(),
+                ProductSingle = product
+            };
+            return View(productListVM);
         }
     }
 }

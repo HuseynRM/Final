@@ -302,7 +302,6 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato B
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\ProductList\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\SingleProduct\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.RazorTargetAssemblyInfo.cache
@@ -313,3 +312,4 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato B
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.pdb
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.genruntimeconfig.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\MenuList\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\ProductList\Detail.cshtml.g.cs
