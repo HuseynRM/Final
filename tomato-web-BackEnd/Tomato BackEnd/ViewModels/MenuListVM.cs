@@ -8,7 +8,6 @@ namespace Tomato_BackEnd.ViewModels
 {
     public class MenuListVM
     {
-        public virtual List<Settings> Settings { get; set; }
         public virtual List<MenuList> MenuLists { get; set; }
         public virtual List<MenuCatagory> MenuCatagories { get; set; }
 

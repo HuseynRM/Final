@@ -22,7 +22,7 @@ namespace Tomato_BackEnd.Controllers
             List<ShopList> ShopList = new List<ShopList>();
             if (categoryId == null)
             {
-                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).ToListAsync();        
+                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).ToListAsync();
             }
             else
             {
@@ -32,13 +32,16 @@ namespace Tomato_BackEnd.Controllers
             ProductListVM productListVM = new ProductListVM()
             {
                 ShopLists = ShopList,
-               ShopCatagorys = await _context.ShopCatagories.Include(x=>x.ShopLists).ToListAsync() 
+                ShopCatagorys = await _context.ShopCatagories.Include(x => x.ShopLists).ToListAsync(),
+
+
             };
             return View(productListVM);
         }
         public async Task<IActionResult> Detail(int? id)
         {
-            ShopList shopList = await _context.ShopLists.Include(x=>x.ProductSingle).FirstOrDefaultAsync(x => x.Id == id);
+            ShopList shopList = await _context.ShopLists.Include(x => x.ProductSingles).FirstOrDefaultAsync(x => x.Id == id);
+            ViewBag.Shops = _context.ShopLists.OrderByDescending(x => x.Id).Take(4).ToList();
             if (shopList == null)
             {
                 return NotFound();

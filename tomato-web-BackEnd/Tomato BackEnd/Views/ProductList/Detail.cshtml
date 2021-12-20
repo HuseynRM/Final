@@ -19,24 +19,12 @@
         <div class="row flex-lg">
             <div class="col w-40-lg">
                 <div class="single-shop-carousel">
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/1.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
-                    <div class="carousel-content">
-                        <img src="~/images/2.jpg" alt="carousel image" class="img-responsive" />
-                    </div>
+                    @foreach (var item in Model.ProductSingles)
+                    {
+                        <div class="carousel-content">
+                            <img src="~/images/@item.Img" alt="carousel image" class="img-responsive" />
+                        </div>
+                    }
                     <div class="carousel-content">
                         <img src="~/images/3.jpg" alt="carousel image" class="img-responsive" />
                     </div>
@@ -73,7 +61,7 @@
             </div>
             <div class="col shop-single-info">
                 <div class="shop-single-title">
-                    <h3 class="text-left">Food title</h3>
+                    <h3 class="text-left">Food Title</h3>
                 </div>
                 <div class="shop-single-price">
                     <div class="ssp">
@@ -108,9 +96,6 @@
                     <li class="active">
                         <a href="#">Food Description</a>
                     </li>
-                    <li class="disabled">
-                        <a href="#">Review (20)</a>
-                    </li>
                 </ul>
             </div>
 
@@ -142,110 +127,29 @@
             <h6>More Food Items</h6>
 
             <div class="row grid-m">
-                <div class="col">
-                    <div class="product-info">
-                        <div class="product-img">
-                            <img src="~/images/product1.png" alt="Product image" />
-                        </div>
+                @foreach (ShopList item in ViewBag.Shops)
+                {
+                    <div class="col">
+                        <div class="product-info">
+                            <div class="product-img">
+                                <img src="~/images/@item.Img" alt="Product image" />
+                            </div>
 
-                        <h4>
-                            <a href="#">Food Name</a>
-                        </h4>
-                        <div class="rc-ratings">
-                            <span class="fa fa-star active"></span>
-                            <span class="fa fa-star active"></span>
-                            <span class="fa fa-star active"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <div class="product-price">$100</div>
+                            <h4>
+                                <a asp-controller="ProductList" asp-action="Detail" asp-route-id="@item.Id">@item.FName</a>
+                            </h4>
 
-                        <div class="shop-meta">
-                            <a href="">
-                                <i class="fa fa-shopping-cart"></i>
-                                Add to cart
-                            </a>
+                            <div class="product-price">$@item.Price</div>
+
+                            <div class="shop-meta">
+                                <a href="">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Add to cart
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="product-info">
-                        <div class="product-img">
-                            <img src="~/images/product2.png" alt="Product image" />
-                        </div>
-
-                        <h4>
-                            <a href="#">Food Name</a>
-                        </h4>
-                        <div class="rc-ratings">
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                        </div>
-                        <div class="product-price">$100</div>
-
-                        <div class="shop-meta">
-                            <a href="">
-                                <i class="fa fa-shopping-cart"></i>
-                                Add to cart
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="product-info">
-                        <div class="product-img">
-                            <img src="~/images/product3.png" alt="Product image" />
-                        </div>
-
-                        <h4>
-                            <a href="#">Food Name</a>
-                        </h4>
-                        <div class="rc-ratings">
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                        </div>
-                        <div class="product-price">$100</div>
-
-                        <div class="shop-meta">
-                            <a href="">
-                                <i class="fa fa-shopping-cart"></i>
-                                Add to cart
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="product-info">
-                        <div class="product-img">
-                            <img src="~/images/product4.png" alt="Product image" />
-                        </div>
-
-                        <h4>
-                            <a href="#">Food Name</a>
-                        </h4>
-                        <div class="rc-ratings">
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star active"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                        </div>
-                        <div class="product-price">$100</div>
-
-                        <div class="shop-meta">
-                            <a href="">
-                                <i class="fa fa-shopping-cart"></i>
-                                Add to cart
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>

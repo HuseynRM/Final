@@ -12,7 +12,6 @@ namespace Tomato_BackEnd.ViewModels
         public virtual List<SpecialService> SpecialServices { get; set; }
         public virtual List<AboutTeam> AboutTeams { get; set; }
         public virtual List<AboutTestimonial> AboutTestimonials { get; set; }
-        public virtual List<Settings> Settings { get; set; }
 
 
     }
