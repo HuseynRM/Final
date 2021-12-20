@@ -24,10 +24,82 @@ namespace Tomato_BackEnd.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Register()
         {
-            
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(MemberRegisterModel registerModel)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            AppUser existUser = await _userManager.FindByNameAsync(registerModel.Email);
+            if (existUser != null)
+            {
+                ModelState.AddModelError("Email", "Email already taken");
+                return View();
+            }
+            AppUser newUser = new AppUser()
+            {
+                Email = registerModel.Email,
+                IsAdmin = false,
+            };
+
+            var result = await _userManager.CreateAsync(newUser, registerModel.Password);
+
+            if (!result.Succeeded)
+            {
+                foreach (var item in result.Errors)
+                {
+                    if (item.Code == "PasswordTooShort")
+                    {
+                        item.Description = "Passwordun uzunlugu 8-den kicik ola bilmez";
+                    }
+                    else if (item.Description == "ConfirmedPassword and Password do not match.")
+                    {
+                        item.Description = "Alinmadi";
+                    }
+                    ModelState.AddModelError("", item.Description);
+                }
+                return View();
+            }
+
+            await _userManager.AddToRoleAsync(newUser, "Member");
+            await _signInManager.SignInAsync(newUser, true);
+
+            return RedirectToAction("index", "home");
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(MemberLoginModel loginModel)
+        {
+
+            AppUser user = await _userManager.FindByNameAsync(loginModel.Email);
+
+            if (user == null || user.IsAdmin)
+            {
+                ModelState.AddModelError("", "Email or Password is incorrect");
+                return View();
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user, loginModel.Password, loginModel.IsPersistent, true);
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Email or Password is incorrect");
+                return View();
+            }
+
+            return RedirectToAction("index", "home");
         }
     }
 }

@@ -7,12 +7,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Tomato_BackEnd.ViewModels
 {
-    public class MemberLoginModel
+    public class MemberRegisterModel
     {
         [DataType(DataType.EmailAddress), StringLength(maximumLength: 500)]
         public string Email { get; set; }
-        [StringLength(maximumLength: 50), DataType(DataType.Password)]
+        [StringLength(maximumLength: 500)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
-        public bool IsPersistent { get; set; }
+
+        [StringLength(maximumLength: 500)]
+        [DataType(DataType.Password), Compare(nameof(Password))]
+        public string ConfirmedPassword { get; set; }
     }
 }

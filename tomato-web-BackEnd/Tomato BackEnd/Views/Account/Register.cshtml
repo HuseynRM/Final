@@ -1,0 +1,57 @@
+﻿@model MemberRegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="page-header">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md">
+                <h2 class="heading-1">Account</h2>
+                <p class="text-1">Please login or signup to continue with your purchase</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="shop-content">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="shop-login grid-4">
+                    <div class="col">
+                        <div class="box-content">
+                            <h3 class="text-center">Register an account</h3>
+                            <form asp-action="register" asp-controller="account" method="post" class="logreform">
+                                <div class="form-group">
+                                    <label>E-mail Address</label>
+                                    <input asp-for="@Model.Email" type="text" value-class="form-control" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="@Model.Email"></span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group flex-lg">
+                                        <div class="col">
+                                            <label>Password</label>
+                                            <input asp-for="@Model.Password" type="password" value-class="form-control" class="form-control" />
+                                            <span class="text-danger" asp-validation-for="@Model.Password"></span>
+                                        </div>
+                                        <div class="col">
+                                            <label>Re-enter Password</label>
+                                            <input asp-for="@Model.ConfirmedPassword" type="password" value-class="form-control" class="form-control" />
+                                            <span class="text-danger" asp-validation-for="@Model.ConfirmedPassword"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary btn-register">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
