@@ -39,12 +39,22 @@ namespace Tomato_BackEnd
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireLowercase = true;
-                options.Password.RequiredLength = 8;
+                options.Password.RequiredLength = 7;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(31);
                 options.Lockout.MaxFailedAccessAttempts = 3;
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
 
             services.AddHttpContextAccessor();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(60);
+            });
+
+            services.ConfigureApplicationCookie(opt =>
+            {
+                opt.AccessDeniedPath = "/account/login";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,12 +65,11 @@ namespace Tomato_BackEnd
                 app.UseDeveloperExceptionPage();
             }
             app.UseHttpsRedirection();
-
             app.UseStaticFiles();
 
-            app.UseAuthentication();
-
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseSession();
 
             app.UseAuthorization();
 

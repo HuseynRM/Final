@@ -24,10 +24,24 @@ namespace Tomato_BackEnd.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
+        #region CreateRole
+        //public async Task<IActionResult> CreateRole()
+        //{
+        //    IdentityRole identityRole1 = new IdentityRole("Member");
+        //    IdentityRole identityRole2 = new IdentityRole("Admin");
+
+
+        //    await _roleManager.CreateAsync(identityRole1);
+        //    await _roleManager.CreateAsync(identityRole2);
+
+        //    return Content("ok");
+        //}
+        #endregion
         public IActionResult Register()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(MemberRegisterModel registerModel)
@@ -38,7 +52,7 @@ namespace Tomato_BackEnd.Controllers
                 return View();
             }
 
-            AppUser existUser = await _userManager.FindByNameAsync(registerModel.Email);
+            AppUser existUser = await _userManager.FindByEmailAsync(registerModel.Email);
             if (existUser != null)
             {
                 ModelState.AddModelError("Email", "Email already taken");
@@ -47,6 +61,7 @@ namespace Tomato_BackEnd.Controllers
             AppUser newUser = new AppUser()
             {
                 Email = registerModel.Email,
+                UserName = registerModel.UserName,
                 IsAdmin = false,
             };
 
@@ -83,7 +98,7 @@ namespace Tomato_BackEnd.Controllers
         public async Task<IActionResult> Login(MemberLoginModel loginModel)
         {
 
-            AppUser user = await _userManager.FindByNameAsync(loginModel.Email);
+            AppUser user = await _userManager.FindByEmailAsync(loginModel.Email);
 
             if (user == null || user.IsAdmin)
             {
@@ -101,5 +116,12 @@ namespace Tomato_BackEnd.Controllers
 
             return RedirectToAction("index", "home");
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("login");
+        }
+
     }
 }

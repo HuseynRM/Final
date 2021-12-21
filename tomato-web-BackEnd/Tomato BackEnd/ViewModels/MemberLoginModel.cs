@@ -9,6 +9,8 @@ namespace Tomato_BackEnd.ViewModels
 {
     public class MemberLoginModel
     {
+        [StringLength(100)]
+        public string UserName { get; set; }
         [DataType(DataType.EmailAddress), StringLength(maximumLength: 500)]
         public string Email { get; set; }
         [StringLength(maximumLength: 50), DataType(DataType.Password)]
