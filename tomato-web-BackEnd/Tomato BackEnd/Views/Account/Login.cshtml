@@ -23,9 +23,9 @@
                         <div class="box-content">
                             <h3 class="text-center">Existing customer</h3>
 
-                            <form asp-action="register" asp-controller="account" method="post" class="logreform">
+                            <form method="post" class="logreform">
                                 <div class="form-group">
-                                    <label>Username or E-mail Address</label>
+                                    <label> E-mail Address</label>
                                     <input asp-for="@Model.Email" type="text" value-class="form-control" class="form-control" />
                                     <span class="text-danger" asp-validation-for="@Model.Email"></span>
                                 </div>
@@ -37,21 +37,11 @@
                                 <div class="form-group">
                                     <div class="flex">
                                         <label>Password</label>
-                                        <a href="#">(Lost Password?)</a>
                                     </div>
                                     <input asp-for="@Model.Password" type="password" value-class="form-control" class="form-control" />
                                     <span class="text-danger" asp-validation-for="@Model.Password"></span>
                                 </div>
                                 <div class="flex m-5">
-                                    <div class="col">
-                                        <span class="remember-box checkbox">
-                                            <label for="rememberme">
-                                                <input type="checkbox" id="rememberme" name="rememberme" />
-                                                Remember me
-                                            </label>
-                                        </span>
-                                    </div>
-
                                     <div class="col col-end">
                                         <button type="submit" class="btn btn-primary btn-account">Login</button>
                                     </div>

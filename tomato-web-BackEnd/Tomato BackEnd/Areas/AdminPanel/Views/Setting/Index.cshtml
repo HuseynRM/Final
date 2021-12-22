@@ -1,0 +1,47 @@
+﻿@model Settings
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="row d-flex justify-content-end mb-2">
+        <div class="col-md-1 m-3">
+            <a asp-action="create" class="d-flex m-3" style="text-decoration:none;">
+                <button class="backendButton px-4 py-2 mr--30" style=" border-radius: 20px; color: white; background-image: linear-gradient(to right,blue,red); font: bold; ">CREATE</button>
+            </a>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr class="row">
+                <th class="col-md-1">#</th>
+                <th class="col-md-2">Phone</th>
+                <th class="col-md-2">Address</th>
+                <th class="col-md-2">Mail</th>
+                <th class="col-md-2">Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row">
+                <td class="col-md-1">1</td>
+                <td class="col-md-2">@Model.Phone</td>
+                <td class="col-md-2">@Model.Location</td>
+                <td class="col-md-2">@Model.Mail</td>
+                <td class="col-md-2">@Model.Facebook</td>
+                <td class="col-md-2">@Model.Google</td>
+                <td class="col-md-2">@Model.Twitter</td>
+                <td class="col-md-2">@Model.LinkIn</td>
+                <td class="col-md-2">@Model.YouTube</td>
+                <td class="col-md-2">@Model.Pinteres</td>
+                <td class="col-md-2">
+                    <a class="btn btn-warning w-75" asp-action="edit" asp-route-id="@Model.Id">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<style>
+    .backendButton:hover {
+        background-image: linear-gradient(to right,red,blue) !important;
+    }
+</style>
