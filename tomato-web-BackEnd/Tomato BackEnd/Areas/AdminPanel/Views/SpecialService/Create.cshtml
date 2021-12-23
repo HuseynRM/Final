@@ -1,0 +1,28 @@
+﻿@model SpecialService
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="@Model.ServiceDesc">Desc</label>
+            <input type="text" asp-for="@Model.ServiceDesc" class="form-control" id="ServiceDesc" placeholder="ServiceDesc">
+            <span asp-validation-for="@Model.ServiceDesc" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.ServiceIMgFile">Image</label>
+            <input asp-for="@Model.ServiceIMgFile" accept="image/*" class="form-control col-md-2" rows="3"></input>
+            <span asp-validation-for="@Model.ServiceIMgFile" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.ServiceTitle">Title</label>
+            <input type="text" asp-for="@Model.ServiceTitle" class="form-control" id="ServiceTitle" placeholder="ServiceTitle">
+            <span asp-validation-for="@Model.ServiceTitle" class="text-danger"></span>
+        </div>
+       
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
