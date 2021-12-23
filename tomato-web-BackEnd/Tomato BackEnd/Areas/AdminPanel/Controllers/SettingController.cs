@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,25 +26,64 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             Settings setting = _context.Settings.First();
             return View(setting);
         }
-        public IActionResult Create()
+        public async Task<IActionResult> Delete(int id)
         {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Create(Settings settings)
-        {
+            Settings setting = await _context.Settings.FirstOrDefaultAsync(x => x.Id == id);
+            if (setting == null)
+            {
+                return RedirectToAction("index");
+            };
             if (_context.Settings.Count() == 1)
             {
-                ModelState.AddModelError("", "Yalniz 1 eded setting ola biler,yaratdiginiz settingi deyise bilersiz");
-                return View();
+                return RedirectToAction("index");
+            }
+            _context.Settings.Remove(setting);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        public async Task<IActionResult> Edit(int id)
+        {
+            Settings setting = await _context.Settings.FirstOrDefaultAsync(x => x.Id == id);
+            if (setting == null)
+            {
+                return RedirectToAction("index");
+            }
+
+            return View(setting);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id,Settings settings)
+        {
+            Settings existSetting = await _context.Settings.FirstOrDefaultAsync(x => x.Id == id);
+            if (existSetting == null)
+            {
+                return RedirectToAction("index");
             }
             if (!ModelState.IsValid)
             {
                 return View();
             }
+            existSetting.Facebook = settings.Facebook;
 
-            _context.Settings.Add(settings);
-            _context.SaveChanges();
+            existSetting.Google = settings.Google;
+
+            existSetting.LinkIn = settings.LinkIn;
+
+            existSetting.Location = settings.Location;
+
+            existSetting.Mail = settings.Mail;
+
+            existSetting.Phone = settings.Phone;
+
+            existSetting.Pinteres = settings.Pinteres;
+
+            existSetting.Twitter = settings.Twitter;
+
+            existSetting.YouTube = settings.YouTube;
+
+            await _context.SaveChangesAsync();
+
             return RedirectToAction("index");
         }
     }

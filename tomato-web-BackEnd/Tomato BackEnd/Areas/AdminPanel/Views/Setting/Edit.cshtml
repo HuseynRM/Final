@@ -1,0 +1,62 @@
+﻿@model Settings
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-group col-md-8">
+                <label asp-for="@Model.Phone">Number</label>
+                <input type="text" asp-for="@Model.Phone" class="form-control" id="title" placeholder="Title">
+                <span asp-validation-for="@Model.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="@Model.Location">Address</label>
+                <input asp-for="@Model.Location" class="form-control" rows="3"></input>
+                <span asp-validation-for="@Model.Location" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.Mail">Mail</label>
+                <input asp-for="@Model.Mail" class="form-control " id="Subtitle" rows="3"></input>
+                <span asp-validation-for="@Model.Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.Facebook">Facebook</label>
+                <input asp-for="@Model.Facebook" class="form-control " rows="3"></input>
+                <span asp-validation-for="@Model.Facebook" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.Google">Google</label>
+                <input asp-for="@Model.Google" class="form-control " rows="3"></input>
+                <span asp-validation-for="@Model.Google" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.Twitter">Twitter</label>
+                <input asp-for="@Model.Twitter" class="form-control " rows="3"></input>
+                <span asp-validation-for="@Model.Twitter" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.LinkIn">LinkIn</label>
+                <input asp-for="@Model.LinkIn" class="form-control " rows="3"></input>
+                <span asp-validation-for="@Model.LinkIn" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.YouTube">Youtube</label>
+                <input asp-for="@Model.YouTube" class="form-control " rows="3"></input>
+                <span asp-validation-for="@Model.YouTube" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label asp-for="@Model.Pinteres">Pinteres</label>
+                <input asp-for="@Model.Pinteres" class="form-control " rows="3"></input>
+                <span asp-validation-for="@Model.Pinteres" class="text-danger"></span>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <button type="submit" class="btn btn-primary m-3">Submit</button>
+    </form>
+
+</div>
