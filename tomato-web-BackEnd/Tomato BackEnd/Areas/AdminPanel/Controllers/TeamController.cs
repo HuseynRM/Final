@@ -96,5 +96,64 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
 
             return RedirectToAction("index");
         }
+        public async Task<IActionResult> Delete(int id)
+        {
+            AboutTeam team = await _context.AboutTeams.FirstOrDefaultAsync(x => x.Id == id);
+            if (team == null)
+            {
+                return RedirectToAction("index");
+            }
+            if (_context.SpecialService.Count() == 2)
+            {
+                return RedirectToAction("index");
+            }
+
+;
+            string rootPath = _env.WebRootPath;
+            var path = Path.Combine(rootPath, "uploads/ourteam", team.TeamImg);
+            System.IO.File.Delete(path);
+
+
+            _context.AboutTeams.Remove(team);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(AboutTeam team)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            if (team.TeamImgFile != null)
+            {
+                if (team.TeamImgFile.ContentType != "image/png" && team.TeamImgFile.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ImageFile", "Jpeg ve ya png formatinda file daxil edilmelidir");
+                    return View();
+                }
+                if (team.TeamImgFile.Length > (1024 * 1024) * 5)
+                {
+                    ModelState.AddModelError("ImageFile", "File olcusu 5mb-dan cox olmaz!");
+                    return View();
+                }
+                string rootPath = _env.WebRootPath;
+                var fileName = Guid.NewGuid().ToString() + team.TeamImgFile.FileName;
+                var path = Path.Combine(rootPath, "uploads/ourteam", fileName);
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    team.TeamImgFile.CopyTo(stream);
+                }
+                team.TeamImg = fileName;
+            }
+            await _context.AboutTeams.AddAsync(team);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
     }
 }

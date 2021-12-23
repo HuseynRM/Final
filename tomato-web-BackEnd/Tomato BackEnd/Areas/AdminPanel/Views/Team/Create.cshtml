@@ -1,0 +1,41 @@
+﻿@model AboutTeam
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="@Model.CookName">Name</label>
+            <input type="text" asp-for="@Model.CookName" class="form-control" id="CookName" placeholder="CookName">
+            <span asp-validation-for="@Model.CookName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.TeamImgFile">Image</label>
+            <input asp-for="@Model.TeamImgFile" accept="image/*" class="form-control col-md-2" rows="3"></input>
+            <span asp-validation-for="@Model.TeamImgFile" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Designation">Designation</label>
+            <input type="text" asp-for="@Model.Designation" class="form-control" id="Designation" placeholder="Designation">
+            <span asp-validation-for="@Model.Designation" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Facebook">FacebookURL</label>
+            <input type="text" asp-for="@Model.Facebook" class="form-control" id="Facebook" placeholder="Facebook">
+            <span asp-validation-for="@Model.Facebook" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Twiter">TwiterURL</label>
+            <input type="text" asp-for="@Model.Twiter" class="form-control" id="Twiter" placeholder="Twiter">
+            <span asp-validation-for="@Model.Twiter" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Google">GoogleURL</label>
+            <input type="text" asp-for="@Model.Google" class="form-control" id="Google" placeholder="Google">
+            <span asp-validation-for="@Model.Google" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
