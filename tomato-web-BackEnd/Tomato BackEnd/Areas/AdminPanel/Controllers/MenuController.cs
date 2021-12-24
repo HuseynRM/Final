@@ -51,5 +51,32 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
+        public async Task<IActionResult> Delete(int id)
+        {
+            MenuList menu = await _context.MenuLists.FirstOrDefaultAsync(x => x.Id == id);
+            if (menu == null)
+            {
+                return RedirectToAction("index");
+            }
+           
+
+            _context.MenuLists.Remove(menu);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        public async Task<IActionResult> Edit(int id)
+        {
+            ViewBag.Categories = await _context.MenuCatagories.ToListAsync();
+            MenuList menu =await _context.MenuLists.FirstOrDefaultAsync(x => x.Id == id);
+            if (menu == null)
+            {
+                return RedirectToAction("index");
+            }
+
+            return View(menu);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
     }
 }
