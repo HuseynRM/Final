@@ -1,0 +1,22 @@
+﻿@model AboutTestimonial
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="@Model.QuoteAuthor">Author</label>
+            <input type="text" asp-for="@Model.QuoteAuthor" class="form-control" id="Author" placeholder="Author">
+            <span asp-validation-for="@Model.QuoteAuthor" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.QuoteBody">QuoteBody</label>
+            <input type="text" asp-for="@Model.QuoteBody" class="form-control" id="QuoteBody" placeholder="QuoteBody">
+            <span asp-validation-for="@Model.QuoteBody" class="text-danger"></span>
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
