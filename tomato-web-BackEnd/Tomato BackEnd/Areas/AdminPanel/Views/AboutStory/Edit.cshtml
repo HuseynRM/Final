@@ -1,0 +1,31 @@
+﻿@model AboutStory
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="@Model.StoryContent">Content</label>
+            <input type="text" asp-for="@Model.StoryContent" class="form-control" id="StoryContent" placeholder="StoryContent">
+            <span asp-validation-for="@Model.StoryContent" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.StoryImgFile">Image</label>
+            <input asp-for="@Model.StoryImgFile" class="form-control col-md-2" rows="3">
+            <span asp-validation-for="@Model.StoryImgFile" class="text-danger"></span>
+        </div>
+        <div class="img-box" style="position:relative;max-width:200px;background-color:black;width:200px;height:200px;max-height:200px;">
+            <img class="d-block" src="~/images/@Model.StoryImg" style="max-width:180px;width:180px;height:180px;max-height:180px;margin-left:10px;padding-top:20px" />
+
+            <input type="hidden" name="Image" value="@Model.StoryImg" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+<style>
+    button{
+        margin: 10px;
+    }
+</style>
