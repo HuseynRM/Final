@@ -23,7 +23,7 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
         public async Task<IActionResult> Index(int page = 1)
         {
             ViewBag.SelectedPage = page;
-            ViewBag.TotalPageCount = Math.Ceiling(_context.SpecialService.Count() / 4m);
+            ViewBag.TotalPageCount = Math.Ceiling(_context.AboutTestimonials.Count() / 4m);
             List<AboutTestimonial> testimonials = await _context.AboutTestimonials.Skip((page - 1) * 4).Take(4).ToListAsync();
 
             return View(testimonials);

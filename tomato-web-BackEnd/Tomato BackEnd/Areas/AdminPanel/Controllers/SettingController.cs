@@ -21,8 +21,10 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             _context = context;
             _env = env;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
+            ViewBag.SelectedPage = page;
+            ViewBag.TotalPageCount = Math.Ceiling(_context.Settings.Count() / 4m);
             Settings setting = _context.Settings.First();
             return View(setting);
         }
