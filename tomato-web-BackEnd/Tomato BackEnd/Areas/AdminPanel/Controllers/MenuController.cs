@@ -26,7 +26,7 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             ViewBag.SelectedPage = page;
             ViewBag.TotalPageCount = Math.Ceiling(_context.MenuLists.Count() / 4m);
             List<MenuList> menu =
-                await _context.MenuLists.Include(a=>a.MenuCatagory).Skip((page - 1) * 4).Take(4).ToListAsync();
+                await _context.MenuLists.Include(a => a.MenuCatagory).Skip((page - 1) * 4).Take(4).ToListAsync();
             return View(menu);
         }
         public async Task<IActionResult> Create()
@@ -58,7 +58,7 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             {
                 return RedirectToAction("index");
             }
-           
+
 
             _context.MenuLists.Remove(menu);
             await _context.SaveChangesAsync();
@@ -67,7 +67,7 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             ViewBag.Categories = await _context.MenuCatagories.ToListAsync();
-            MenuList menu =await _context.MenuLists.FirstOrDefaultAsync(x => x.Id == id);
+            MenuList menu = await _context.MenuLists.FirstOrDefaultAsync(x => x.Id == id);
             if (menu == null)
             {
                 return RedirectToAction("index");
@@ -77,6 +77,28 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, MenuList menuList)
+        {
+            ViewBag.Categories = _context.MenuCatagories.ToList();
 
+            MenuList existmennu = await _context.MenuLists.FirstOrDefaultAsync(x => x.Id == id);
+            if (!await _context.MenuCatagories.AnyAsync(x => x.Id == menuList.MenuCatagoryId)) return RedirectToAction("index");
+            if (existmennu == null)
+            {
+                return RedirectToAction("index");
+            }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            existmennu.Name = menuList.Name;
+            existmennu.Price = menuList.Price;
+            existmennu.Desc = menuList.Desc;
+            existmennu.MenuCatagoryId = menuList.MenuCatagoryId;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
     }
 }
