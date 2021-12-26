@@ -341,3 +341,8 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato B
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Edit.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Create.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Create.cshtml.g.cs

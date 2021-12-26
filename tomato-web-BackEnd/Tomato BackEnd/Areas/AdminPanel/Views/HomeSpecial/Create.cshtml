@@ -1,0 +1,31 @@
+﻿@model HomeSpecial 
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="@Model.SpecialName">Name</label>
+            <input type="text" asp-for="@Model.SpecialName" class="form-control" id="Name" placeholder="Name">
+            <span asp-validation-for="@Model.SpecialName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Text">Text</label>
+            <input type="text" asp-for="@Model.Text" class="form-control" id="Text" placeholder="Text">
+            <span asp-validation-for="@Model.Text" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Text1">Text1</label>
+            <input type="text" asp-for="@Model.Text1" class="form-control" id="Text1" placeholder="Text1">
+            <span asp-validation-for="@Model.Text1" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.SpecialImgFile">Image</label>
+            <input asp-for="@Model.SpecialImgFile" accept="image/*" class="form-control col-md-2" rows="3">
+            <span asp-validation-for="@Model.SpecialImgFile" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
