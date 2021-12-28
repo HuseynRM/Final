@@ -155,12 +155,6 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Tomato BackEnd\Tomato BackEnd\obj
 C:\Users\ASUS\OneDrive\Рабочий стол\Tomato BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Tomato BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\SingleProduct\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Tomato BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Views\ProductList\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.AssemblyInfoInputs.cache
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.AssemblyInfo.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.RazorAssemblyInfo.cache
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.RazorAssemblyInfo.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\bin\Debug\netcoreapp3.1\Tomato BackEnd.exe
@@ -288,19 +282,47 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato B
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.AssemblyInfoInputs.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.AssemblyInfo.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.RazorAssemblyInfo.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.RazorAssemblyInfo.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\staticwebassets\Tomato BackEnd.StaticWebAssets.Manifest.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\staticwebassets\Tomato BackEnd.StaticWebAssets.xml
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\scopedcss\bundle\Tomato BackEnd.styles.css
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.TagHelpers.input.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.TagHelpers.output.cache
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.RazorCoreGenerate.cache
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutStory\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutStory\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutStory\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutTestimonial\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutTestimonial\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutTestimonial\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Menu\Create.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Menu\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Menu\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Product\Edit.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Product\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Setting\Edit.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Setting\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\SpecialService\Create.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\SpecialService\Edit.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\SpecialService\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Team\Create.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Team\Edit.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Team\Index.cshtml.g.cs
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\_ViewImports.cshtml.g.cs
@@ -326,24 +348,4 @@ C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato B
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.dll
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.pdb
 C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.genruntimeconfig.cache
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Tomato BackEnd.csproj.AssemblyReference.cache
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Team\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutTestimonial\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutTestimonial\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutTestimonial\Edit.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutStory\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutStory\Edit.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\AboutStory\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Menu\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Menu\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Menu\Edit.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Edit.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeInfo\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Edit.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeSpecial\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Index.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Edit.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\HomeFeature\Create.cshtml.g.cs
-C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Product\Index.cshtml.g.cs
+C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Product\Create.cshtml.g.cs

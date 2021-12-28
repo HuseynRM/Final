@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Tomato_BackEnd.DAL;
@@ -29,6 +30,125 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
                 await _context.ShopLists.Include(a=>a.ShopCatagory).Skip((page - 1) * 4).Take(4).ToListAsync();
             return View(lists);
         }
+        public async Task<IActionResult> Edit(int id)
+        {
+            ViewBag.Categories = await _context.ShopCatagories.ToListAsync();
+            ShopList list = await _context.ShopLists.FirstOrDefaultAsync(x => x.Id == id);
+            if (list == null)
+            {
+                return RedirectToAction("index");
+            }
 
+            return View(list);
+
+            
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, ShopList shopList)
+        {
+            ViewBag.Categories = _context.ShopCatagories.ToList();
+
+            ShopList existlist = await _context.ShopLists.FirstOrDefaultAsync(x => x.Id == id);
+            if (!await _context.ShopCatagories.AnyAsync(x => x.Id == shopList.ShopCatagoryId)) return RedirectToAction("index");
+            if (existlist == null)
+            {
+                return RedirectToAction("index");
+            }
+            if (shopList.ImgFile != null)
+            {
+                if (shopList.ImgFile.ContentType != "image/png" && shopList.ImgFile.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ImageFile", "Jpeg ve ya png formatinda file daxil edilmelidir");
+                    return View();
+                }
+                if (shopList.ImgFile.Length > (1024 * 1024) * 5)
+                {
+                    ModelState.AddModelError("ImageFile", "File olcusu 5mb-dan cox olmaz!");
+                    return View();
+                }
+                string rootPath = _env.WebRootPath;
+                var fileName = Guid.NewGuid().ToString() + shopList.ImgFile.FileName;
+                var path = Path.Combine(rootPath, "uploads/Product", fileName);
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    shopList.ImgFile.CopyTo(stream);
+                }
+                if (existlist.Img != null)
+                {
+                    string existPath = Path.Combine(_env.WebRootPath, "uploads/Product", existlist.Img);
+                    if (System.IO.File.Exists(existPath))
+                    {
+                        System.IO.File.Delete(existPath);
+                    }
+                }
+                existlist.Img = fileName;
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            existlist.ShopCatagoryId = shopList.ShopCatagoryId;
+            existlist.Price = shopList.Price;
+            existlist.FName = shopList.FName;
+            existlist.ProductSingleId = shopList.ProductSingleId;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        public async Task<IActionResult> Create()
+        {
+            ViewBag.Categories = await _context.ShopCatagories.ToListAsync();
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(ShopList shopList)
+        {
+            ViewBag.Categories = await _context.ShopCatagories.ToListAsync();
+            if (!_context.ShopCatagories.Any(x => x.Id == shopList.ShopCatagoryId))
+            {
+                ModelState.AddModelError("MenuCatagoryId", "Xetaniz var!");
+            }
+            if (shopList.ImgFile != null)
+            {
+                if (shopList.ImgFile.ContentType != "image/png" && shopList.ImgFile.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("ImageFile", "Jpeg ve ya png formatinda file daxil edilmelidir");
+                    return View();
+                }
+                if (shopList.ImgFile.Length > (1024 * 1024) * 5)
+                {
+                    ModelState.AddModelError("ImageFile", "File olcusu 5mb-dan cox olmaz!");
+                    return View();
+                }
+                string rootPath = _env.WebRootPath;
+                var fileName = Guid.NewGuid().ToString() + shopList.ImgFile.FileName;
+                var path = Path.Combine(rootPath, "uploads/Product", fileName);
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    shopList.ImgFile.CopyTo(stream);
+                }
+                if (shopList.Img != null)
+                {
+                    string existPath = Path.Combine(_env.WebRootPath, "uploads/Product", shopList.Img);
+                    if (System.IO.File.Exists(existPath))
+                    {
+                        System.IO.File.Delete(existPath);
+                    }
+                }
+                shopList.Img = fileName;
+            }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            await _context.ShopLists.AddAsync(shopList);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+
+        }
     }
 }
