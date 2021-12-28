@@ -38,16 +38,13 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             {
                 return RedirectToAction("index");
             }
-
             return View(list);
-
-            
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, ShopList shopList)
         {
-            ViewBag.Categories = _context.ShopCatagories.ToList();
+            ViewBag.Categories = await _context.ShopCatagories.ToListAsync();
 
             ShopList existlist = await _context.ShopLists.FirstOrDefaultAsync(x => x.Id == id);
             if (!await _context.ShopCatagories.AnyAsync(x => x.Id == shopList.ShopCatagoryId)) return RedirectToAction("index");
@@ -108,10 +105,16 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
         public async Task<IActionResult> Create(ShopList shopList)
         {
             ViewBag.Categories = await _context.ShopCatagories.ToListAsync();
-            if (!_context.ShopCatagories.Any(x => x.Id == shopList.ShopCatagoryId))
+            if (!await _context.ShopCatagories.AnyAsync(x => x.Id == shopList.ShopCatagoryId))
             {
-                ModelState.AddModelError("MenuCatagoryId", "Xetaniz var!");
+                ModelState.AddModelError("ShopCatagoryId", "Xetaniz var!");
             }
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
             if (shopList.ImgFile != null)
             {
                 if (shopList.ImgFile.ContentType != "image/png" && shopList.ImgFile.ContentType != "image/jpeg")
@@ -131,24 +134,34 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
                 {
                     shopList.ImgFile.CopyTo(stream);
                 }
-                if (shopList.Img != null)
-                {
-                    string existPath = Path.Combine(_env.WebRootPath, "uploads/Product", shopList.Img);
-                    if (System.IO.File.Exists(existPath))
-                    {
-                        System.IO.File.Delete(existPath);
-                    }
-                }
                 shopList.Img = fileName;
             }
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
+            
             await _context.ShopLists.AddAsync(shopList);
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
 
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            ShopList list = await _context.ShopLists.FirstOrDefaultAsync(x => x.Id == id);
+            if (list == null)
+            {
+                return RedirectToAction("index");
+            }
+
+            if (_context.ShopLists.Count() == 2)
+            {
+                return RedirectToAction("index");
+            }
+
+            string rootPath = _env.WebRootPath;
+            var path = Path.Combine(rootPath, "uploads/Product", list.Img);
+            System.IO.File.Delete(path);
+
+            _context.ShopLists.Remove(list);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
         }
     }
 }

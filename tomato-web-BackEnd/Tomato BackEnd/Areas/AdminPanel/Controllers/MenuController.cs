@@ -39,7 +39,7 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
         public async Task<IActionResult> Create(MenuList menu)
         {
             ViewBag.Categories = await _context.MenuCatagories.ToListAsync();
-            if (!_context.MenuCatagories.Any(x => x.Id == menu.MenuCatagoryId))
+            if (!await _context.MenuCatagories.AnyAsync(x => x.Id == menu.MenuCatagoryId))
             {
                 ModelState.AddModelError("MenuCatagoryId", "Xetaniz var!");
             }
