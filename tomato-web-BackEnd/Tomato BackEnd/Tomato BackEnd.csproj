@@ -1857,6 +1857,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\uploads\HomeSpec\" />
     <Folder Include="wwwroot\uploads\Feature\" />
+    <Folder Include="wwwroot\uploads\Product\" />
     <Folder Include="wwwroot\uploads\ResHome\" />
     <Folder Include="wwwroot\uploads\story\" />
     <Folder Include="wwwroot\uploads\ourteam\" />

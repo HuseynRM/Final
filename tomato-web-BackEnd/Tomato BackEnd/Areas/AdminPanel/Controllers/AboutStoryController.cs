@@ -147,6 +147,5 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
-
     }
 }
