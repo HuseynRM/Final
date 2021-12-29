@@ -24,5 +24,6 @@ namespace Tomato_BackEnd.Models
         [StringLength(maximumLength: 4000)]
         [EmailAddress(ErrorMessage = "E-Mail yazin !!!")]
         public string Mail { get; set; }
+        public List<Request> Requests { get; set; }
     }
 }

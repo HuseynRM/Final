@@ -38,5 +38,11 @@ namespace Tomato_BackEnd.Controllers
             _context.SaveChanges();
             return RedirectToAction("index");
         }
+        public IActionResult RequestReservation(int id)
+        {
+            ViewBag.ReservationInfoId = id;
+            return View();
+        }
+
     }
 }
