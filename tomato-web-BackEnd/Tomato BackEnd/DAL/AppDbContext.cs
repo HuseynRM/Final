@@ -23,12 +23,10 @@ namespace Tomato_BackEnd.DAL
         public virtual DbSet<HomeSpecial> HomeSpecials { get; set; }
         public virtual DbSet<Features> Features { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
-        public virtual  DbSet<ReservationInfo> ReservationInfo { get; set; }
         public virtual DbSet<ShopCatagory> ShopCatagories { get; set; }
         public virtual DbSet<ShopList> ShopLists { get; set; }
         public virtual DbSet<MenuCatagory> MenuCatagories { get; set; }
         public virtual DbSet<MenuList> MenuLists { get; set; }
         public virtual DbSet<ProductSingle> ProductSingles { get; set; }
-        public virtual DbSet<Request> Requests { get; set; }
     }
 }
