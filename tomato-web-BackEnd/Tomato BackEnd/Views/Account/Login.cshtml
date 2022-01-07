@@ -37,6 +37,7 @@
                                 <div class="form-group">
                                     <div class="flex">
                                         <label>Password</label>
+                                        <a asp-action="ForgetPassword">(Lost Password?)</a>
                                     </div>
                                     <input asp-for="@Model.Password" type="password" value-class="form-control" class="form-control" />
                                     <span class="text-danger" asp-validation-for="@Model.Password"></span>

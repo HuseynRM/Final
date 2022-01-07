@@ -77,23 +77,15 @@ namespace Tomato_BackEnd.Controllers
                 IsAdmin = false,
             };
 
-            var result = await _userManager.CreateAsync(newUser, registerModel.Password);
+            IdentityResult identityResult = await _userManager.CreateAsync(newUser, registerModel.Password);
 
-            if (!result.Succeeded)
+            if (!identityResult.Succeeded)
             {
-                foreach (var item in result.Errors)
+                foreach (IdentityError identityError in identityResult.Errors)
                 {
-                    if (item.Code == "PasswordTooShort")
-                    {
-                        item.Description = "Passwordun uzunlugu 8-den kicik ola bilmez";
-                    }
-                    else if (item.Description == "ConfirmedPassword and Password do not match.")
-                    {
-                        item.Description = "Alinmadi";
-                    }
-                    ModelState.AddModelError("", item.Description);
+                    ModelState.AddModelError("", identityError.Description);
                 }
-                return View();
+                return View(registerModel);
             }
 
             await _userManager.AddToRoleAsync(newUser, "Member");
@@ -194,6 +186,64 @@ namespace Tomato_BackEnd.Controllers
             smtp.Disconnect(true);
 
             return View();
+        }
+
+        public async Task<IActionResult> ChangePassword(string Id, string token)
+        {
+            if (string.IsNullOrWhiteSpace(Id) || string.IsNullOrWhiteSpace(token))
+            {
+                return NotFound();
+            }
+
+            AppUser appUser = await _userManager.FindByIdAsync(Id);
+
+            if (appUser == null)
+            {
+                return NotFound();
+            }
+
+            ResetPasswordVM resetPasswordVM = new ResetPasswordVM
+            {
+                Id = Id,
+                Token = token
+            };
+
+            return View(resetPasswordVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangePassword(ResetPasswordVM resetPasswordVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            if (string.IsNullOrWhiteSpace(resetPasswordVM.Id) || string.IsNullOrWhiteSpace(resetPasswordVM.Token))
+            {
+                return NotFound();
+            }
+
+            AppUser appUser = await _userManager.FindByIdAsync(resetPasswordVM.Id);
+
+            if (appUser == null)
+            {
+                return NotFound();
+            }
+
+            IdentityResult identityResult = await _userManager.ResetPasswordAsync(appUser, resetPasswordVM.Token, resetPasswordVM.Password);
+
+            if (!identityResult.Succeeded)
+            {
+                foreach (IdentityError error in identityResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(resetPasswordVM);
+            }
+
+            return RedirectToAction("Login");
         }
         public IActionResult Login()
         {

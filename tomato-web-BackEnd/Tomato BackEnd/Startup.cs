@@ -42,7 +42,8 @@ namespace Tomato_BackEnd
                 options.Password.RequiredLength = 7;
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(31);
                 options.Lockout.MaxFailedAccessAttempts = 3;
-            }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
+            }).AddDefaultTokenProviders().
+            AddEntityFrameworkStores<AppDbContext>();
 
             services.AddHttpContextAccessor();
 
