@@ -10,6 +10,10 @@
     <Compile Remove="Migrations\20211213112738_AddedShopListandCatagoryTable_1.Designer.cs" />
     <Compile Remove="Migrations\20211213113429_AddedCatagoryTable_2.cs" />
     <Compile Remove="Migrations\20211213113429_AddedCatagoryTable_2.Designer.cs" />
+    <Compile Remove="Migrations\20220109014042_Updatebasket_3.cs" />
+    <Compile Remove="Migrations\20220109014042_Updatebasket_3.Designer.cs" />
+    <Compile Remove="Migrations\20220109014344_Updatebasket_4.cs" />
+    <Compile Remove="Migrations\20220109014344_Updatebasket_4.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

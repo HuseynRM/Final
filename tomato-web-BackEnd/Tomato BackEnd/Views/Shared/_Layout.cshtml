@@ -2,12 +2,14 @@
 @using Microsoft.EntityFrameworkCore
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @inject UserManager<AppUser> usernamager
+@inject Tomato_BackEnd.Services.LayoutService layoutService
 @{
     AppUser user = null;
     if (User.Identity.IsAuthenticated)
     {
         user = await usernamager.Users.FirstOrDefaultAsync(x => x.UserName == User.Identity.Name && !x.IsAdmin);
     }
+    List<Basket> basketproduct = await layoutService.GetBasket();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -117,7 +119,9 @@
                                 <a href="#" class="">
                                     <div class="flex-nav">
                                         <i class="fa fa-shopping-cart fsc">
-                                            <span class="cart-number">3</span>
+                                            <span class="cart-number">
+                                                @basketproduct.Count()
+                                            </span>
                                             <i class="fas fa-caret-down"></i>
                                         </i>
                                     </div>
@@ -128,32 +132,41 @@
                                             <h4>Shopping cart</h4>
                                         </div>
 
-                                        <div class="card-item">
-                                            <div class="card-item--image">
-                                                <img src="~/images/cart-img1.jpg" alt="Card Image" />
+                                        @foreach (Basket basket in basketproduct)
+                                        {
+                                            <div class="card-item">
+                                                <div class="card-item--image">
+                                                    <img src="~/uploads/Product/@basket.ShopList.Img" alt="Card Image" />
+                                                </div>
+                                                <div class="card-item--article">
+                                                    <a href="#" class="card-item--link">@basket.ShopList.FName</a>
+                                                    <span class="card-item--price">$@basket.Count x @((basket.Count * (int)(basket.ShopList.Price)).ToString("F2")) </span>
+                                                    <i  class="fa fa-times ci-close" ></i>
+                                                </div>
                                             </div>
-                                            <div class="card-item--article">
-                                                <a href="#" class="card-item--link">Breakfast with coffee</a>
-                                                <span class="card-item--price">$19.99</span>
-                                                <span class="card-item--quantity">x 2</span>
-                                                <i class="fa fa-times ci-close"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="card-item">
-                                            <div class="card-item--image">
-                                                <img src="~/images/cart-img2.jpg" alt="Card Image" />
-                                            </div>
-                                            <div class="card-item--article">
-                                                <a href="#" class="card-item--link">Chicken stew</a>
-                                                <span class="card-item--price">$24.99</span>
-                                                <span class="card-item--quantity">x 3</span>
-                                                <i class="fa fa-times ci-close"></i>
-                                            </div>
-                                        </div>
+                                        }
                                         <div class="card-action">
-                                            <span class="card-action--price">$114.95</span>
-                                            <a href="#" class="btn-nav btn-primary-nav">View cart</a>
+                                            <span class="card-action--price">
+                                                @if (basketproduct.Count > 0)
+                                                {
+                                                    double total = 0;
+                                                    foreach (Basket basketProduct in basketproduct)
+                                                    {
+                                                        total += (basketProduct.Count * basketProduct.ShopList.Price);
+                                                    }
+
+                                                    <span class="price">
+                                                        $@total.ToString("F2");
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="card-action--price">
+                                                        $0.00
+                                                    </span>
+                                                }
+                                            </span>
+                                            <a   class="btn-nav btn-primary-nav">View cart</a>
                                         </div>
                                     </ul>
                                 </div>

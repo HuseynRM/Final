@@ -26,5 +26,7 @@ namespace Tomato_BackEnd.Models
         [DataType(DataType.Password)]
         public string CurrentPassword { get; set; }
         //public List<Request> Requests { get; set; }
+        public virtual ICollection<Basket> Baskets { get; set; }
+
     }
 }

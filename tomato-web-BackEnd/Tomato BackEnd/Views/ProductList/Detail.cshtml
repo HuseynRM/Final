@@ -83,7 +83,7 @@
                 <div class="quantity flex">
                     <input type="number" placeholder="1" min="1" />
                     <div class="btn-container">
-                        <a href="#" class="btn btn-primary btn-shop left-space-sm">Add to cart</a>
+                        <a asp-controller="ProductList" asp-action="AddBasket" asp-route-Id="@Model.Id" class="btn btn-primary btn-shop left-space-sm">Add to cart</a>
                         <a href="" class="btn btn-success">buy now</a>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                     <div class="col">
                         <div class="product-info">
                             <div class="product-img">
-                                <img src="~/images/@item.Img" alt="Product image" />
+                                <img src="~/uploads/Product/@item.Img" alt="Product image" />
                             </div>
 
                             <h4>
@@ -142,7 +142,7 @@
                             <div class="product-price">$@item.Price</div>
 
                             <div class="shop-meta">
-                                <a href="">
+                                <a asp-controller="ProductList" asp-action="AddBasket" asp-route-id="@item.ProductSingleId">
                                     <i class="fa fa-shopping-cart"></i>
                                     Add to cart
                                 </a>

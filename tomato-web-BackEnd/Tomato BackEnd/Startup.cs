@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Tomato_BackEnd.DAL;
 using Tomato_BackEnd.Models;
+using Tomato_BackEnd.Services;
 
 namespace Tomato_BackEnd
 {
@@ -56,6 +57,8 @@ namespace Tomato_BackEnd
             {
                 opt.AccessDeniedPath = "/account/login";
             });
+
+            services.AddScoped<LayoutService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

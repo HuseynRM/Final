@@ -21,6 +21,6 @@ namespace Tomato_BackEnd.Models
         public int ShopCatagoryId { get; set; }
         public List<ProductSingle> ProductSingles { get; set; }
         public int? ProductSingleId { get; set; }
-
+        public virtual ICollection<Basket> Baskets { get; set; }
     }
 }
