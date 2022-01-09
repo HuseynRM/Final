@@ -191,13 +191,19 @@ a {
     width: 100%;
     position: relative;
     &--image {
-        max-width: 100%;
+        // max-width: 20%;
         display: block;
+        flex: 1;
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &--article {
         margin-left: 1rem;
         display: block;
+        flex: 2;
     }
 
     &--link {
@@ -222,17 +228,22 @@ a {
         right: 0;
     }
 }
-
+.card-content {
+    // border: 10px solid darkblue;
+    // display: flex;
+}
 // close icon
 .ci-close {
-    font-size: 13px;
+    font-size: 21px;
     color: #555;
     position: absolute;
     top: 8px;
     right: 10px;
     cursor: pointer;
 }
-
+.close {
+    cursor: pointer;
+}
 .card-title {
     color: #fff;
     text-transform: uppercase;
@@ -294,6 +305,7 @@ a {
     display: none;
     align-items: center;
     justify-content: flex-end;
+    outline: 2px solid slateblue;
 }
 
 .hamburger-menu {

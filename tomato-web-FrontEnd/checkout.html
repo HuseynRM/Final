@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tomato Web</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css" /> -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <link rel="stylesheet" href="assets/style.css" />
+    </head>
+    <body>
+        <!-- NAVBAR -->
+       <header class="header">
+            <div class="container-navbar">
+                <input type="checkbox" name="" id="check" />
+                <div class="logo-container">
+                    <img src="images/nav-logo.png" alt="Logo Image" class="logo" />
+                </div>
+
+                <div class="nav">
+                    <div class="nav-links">
+                        <ul>
+                            <li class="nav-item">
+                                <a href="home.html" class="nav-link">
+                                    Home
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="#">home-image</a></li>
+                                        <li class="dropdown-link"><a href="#">home-header slider</a></li>
+                                        <li class="dropdown-link"><a href="#">home-video background</a></li>
+                                        <li class="dropdown-link"><a href="#">home-parallax</a></li>
+                                        <li class="dropdown-link"><a href="#">home-scroll animation</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Menu
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="#">menu-list</a></li>
+                                        <li class="dropdown-link"><a href="#">menu-overlay</a></li>
+                                        <li class="dropdown-link"><a href="#">menu-tile</a></li>
+                                        <li class="dropdown-link"><a href="#">menu-grid</a></li>
+                                        <li class="dropdown-link"><a href="#">menu all</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="reservation.html" class="nav-link">
+                                    reservation
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="reservation.html">reservation</a></li>
+                                        <li class="dropdown-link"><a href="#">reservation-opentable</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    pages
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="about.html">about</a></li>
+                                        <li class="dropdown-link"><a href="#">gallery</a></li>
+                                        <li class="dropdown-link"><a href="#">shortcodes</a></li>
+                                        <li class="dropdown-link"><a href="#">login/signup</a></li>
+                                        <li class="dropdown-link"><a href="#">404 page</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    recipe
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="#">recipe-2col</a></li>
+                                        <li class="dropdown-link"><a href="#">recipe-3col</a></li>
+                                        <li class="dropdown-link"><a href="#">recipe-4col</a></li>
+                                        <li class="dropdown-link"><a href="#">recipe-masonry</a></li>
+                                        <li class="dropdown-link">
+                                            <a href="#">
+                                                recipe-single
+                                                <i class="fas fa-caret-right"></i>
+                                            </a>
+                                            <div class="dropdown second">
+                                                <ul>
+                                                    <li class="dropdown-link"><a href="#">recipe-image</a></li>
+                                                    <li class="dropdown-link"><a href="#">recipe-gallery</a></li>
+                                                    <li class="dropdown-link"><a href="#">recipe-video</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    blog
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="#">blog-right sidebar</a></li>
+                                        <li class="dropdown-link"><a href="#">blog-left sidebar</a></li>
+                                        <li class="dropdown-link"><a href="#">blog-fullwidth</a></li>
+                                        <li class="dropdown-link"><a href="#">blog-masonry</a></li>
+                                        <li class="dropdown-link">
+                                            <a href="#">
+                                                blog-single
+                                                <i class="fas fa-caret-right"></i>
+                                            </a>
+                                            <div class="dropdown second">
+                                                <ul>
+                                                    <li class="dropdown-link"><a href="#">blog-image</a></li>
+                                                    <li class="dropdown-link"><a href="#">blog-gallery</a></li>
+                                                    <li class="dropdown-link"><a href="#">blog-video</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    shop
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link"><a href="#">shop-full</a></li>
+                                        <li class="dropdown-link"><a href="shop-sidebar.html">shop-left sidebar</a></li>
+                                        <li class="dropdown-link"><a href="#">shop-right sidebar</a></li>
+                                        <li class="dropdown-link">
+                                            <a href="#">
+                                                shop-single
+                                                <i class="fas fa-caret-right"></i>
+                                            </a>
+                                            <div class="dropdown second">
+                                                <ul>
+                                                    <li class="dropdown-link"><a href="shop-full.html">shop-full</a></li>
+                                                    <li class="dropdown-link"><a href="#">shop-left sidebar</a></li>
+                                                    <li class="dropdown-link"><a href="#">shop-right sidebar</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-link"><a href="#">shop-cart</a></li>
+                                        <li class="dropdown-link"><a href="#">shop-checkout</a></li>
+                                        <li class="dropdown-link"><a href="account.html">shop-account</a></li>
+                                        <li class="dropdown-link"><a href="#">shop-account detail</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item m-right">
+                                <a href="contact.html" class="nav-link nav-link--2">Contact</a>
+                            </li>
+
+                            <!-- shopping -->
+                            <li class="nav-item nav-item--2">
+                                <a href="#" class="">
+                                    <div class="flex-nav">
+                                        <i class="fa fa-shopping-cart fsc">
+                                            <span class="cart-number">3</span>
+                                            <i class="fas fa-caret-down"></i>
+                                        </i>
+                                    </div>
+                                </a>
+                                <div class="dropdown dropdown-lg">
+                                    <ul class="card-content">
+                                        <div class="card-title">
+                                            <h4>Shopping cart</h4>
+                                          </div>
+                                        </ul>
+                                        <div class="card-action">
+                                            <span class="card-action--price">$114.95</span>
+                                            <a href="checkout.html" class="btn-nav btn-primary-nav">View cart</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hamburger-menu-container">
+                        <div class="hamburger-menu">
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                </div>
+        </header>
+
+        <section class="page-header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md">
+                        <h2 class="heading-1">cart<t/h2>
+                        <p class="text-1">Checkout or add some items to your cart</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="shop-content" id="checkout">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <table class="cart-table table table-bordered">
+                  <div class="product-container">
+                    <thead>
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#" class="remove">
+                            <i class="fa fa-times"></i>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="#">
+                            <img src="images/check1.png" alt="checkout image">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="shop-full.html">
+                            Delicious Food Name
+                          </a>
+                        </td>
+                        <td>
+                          <span class="amount">$69.99</span>
+                        </td>
+                        <td>
+                          <div class="quantity">
+                            1
+                          </div>
+                        </td>
+                        <td>
+                          <span class="amount">$99.99</span>
+                        </td>
+                      </tr>
+                  </div>
+
+                    <tr>
+                      <td colspan="6" class="actions">
+                        <div class="row align-items-center">
+                          <div class="col-md-6">
+                            <div class="actions-coupon form-group">
+                              <label>Coupon:</label>
+                              <div class="flex">
+                                <input type="text" class="form-control-2" placeholder="Coupon code">
+                                <button type="submit">Apply</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="cart-btn flex">
+                              <button class="btn btn-primary" type="submit">Update Cart</button>
+                              <button class="btn btn-success w-100 ms-3" type="submit">Checkout</button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="cart-total">
+                  <div class="col-md-6 push-md-6 no-padding">
+                    <h4 class="text-left">Cart Totals</h4>
+                    <table class="table table-bordered col-md-6">
+                      <tbody>
+                        <tr>
+                          <th>Cart Subtotal</th>
+                          <td>
+                            <span class="amount">$190.00</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Shipping and Handling</th>
+                          <td> Free Shipping</td>
+                        </tr>
+                        <tr>
+                          <th>Order Total</th>
+                          <td>
+                            <strong>
+                              <span class="amount">$190.00</span>
+                            </strong>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script src="src/main.js"></script>
+        <script src="src/basket.js"></script>
+      </body>
+</html>

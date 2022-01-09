@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "mix dry fruit",
+        "price": 5.99,
+        "image": { "fields": { "file": { "url": "images/product1.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "peanuts",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "images/product2.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "crax",
+        "price": 12.99,
+        "image": { "fields": { "file": { "url": "images/product3.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "biscuits",
+        "price": 2.99,
+        "image": { "fields": { "file": { "url": "images/product4.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "cake",
+        "price": 4.99,
+        "image": { "fields": { "file": { "url": "images/5.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "pizza-slice",
+        "price": 1.99,
+        "image": { "fields": { "file": { "url": "images/6.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "pizza",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "images/7.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "hamburger",
+        "price": 6.99,
+        "image": { "fields": { "file": { "url": "images/8.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "title": "fruit-biscuit",
+        "price": 3.99,
+        "image": { "fields": { "file": { "url": "images/9.png" } } }
+      }
+    }
+  ]
+}
