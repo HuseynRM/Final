@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\assets\sass\layout\home.css.map" />
+    <None Include="wwwroot\assets\style.css.map" />
+    <None Include="wwwroot\css\style.css.map" />
     <None Include="wwwroot\manage\img\undraw_posting_photo.svg" />
     <None Include="wwwroot\manage\img\undraw_profile.svg" />
     <None Include="wwwroot\manage\img\undraw_profile_1.svg" />
@@ -1845,6 +1848,45 @@
     <None Include="wwwroot\manage\vendor\jquery\jquery.slim.js" />
     <None Include="wwwroot\manage\vendor\jquery\jquery.slim.min.js" />
     <None Include="wwwroot\manage\vendor\jquery\jquery.slim.min.map" />
+    <None Include="wwwroot\plugins\flexslider\jquery.flexslider-min.js" />
+    <None Include="wwwroot\plugins\flexslider\jquery.flexslider.js" />
+    <None Include="wwwroot\plugins\magnificPopup\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\plugins\owl-carousel\owl.carousel.min.js" />
+    <None Include="wwwroot\plugins\slick\slick.min.js" />
+    <None Include="wwwroot\plugins\timepicker\dist\bootstrap-clockpicker.js" />
+    <None Include="wwwroot\plugins\timepicker\dist\bootstrap-clockpicker.min.js" />
+    <None Include="wwwroot\plugins\timepicker\dist\jquery-clockpicker.js" />
+    <None Include="wwwroot\plugins\timepicker\dist\jquery-clockpicker.min.js" />
+    <None Include="wwwroot\src\basket.js" />
+    <None Include="wwwroot\src\cart.js" />
+    <None Include="wwwroot\src\main.js" />
+    <None Include="wwwroot\src\sass\abstracts\_grid.scss" />
+    <None Include="wwwroot\src\sass\abstracts\_mixins.scss" />
+    <None Include="wwwroot\src\sass\base\_animations.scss" />
+    <None Include="wwwroot\src\sass\base\_base.scss" />
+    <None Include="wwwroot\src\sass\base\_index.scss" />
+    <None Include="wwwroot\src\sass\base\_reset.scss" />
+    <None Include="wwwroot\src\sass\base\_root.scss" />
+    <None Include="wwwroot\src\sass\base\_typography.scss" />
+    <None Include="wwwroot\src\sass\components\_buttons.scss" />
+    <None Include="wwwroot\src\sass\components\_index.scss" />
+    <None Include="wwwroot\src\sass\layout\_about.scss" />
+    <None Include="wwwroot\src\sass\layout\_account.scss" />
+    <None Include="wwwroot\src\sass\layout\_basket.scss" />
+    <None Include="wwwroot\src\sass\layout\_checkout.scss" />
+    <None Include="wwwroot\src\sass\layout\_contact.scss" />
+    <None Include="wwwroot\src\sass\layout\_footer.scss" />
+    <None Include="wwwroot\src\sass\layout\_header.scss" />
+    <None Include="wwwroot\src\sass\layout\_home.scss" />
+    <None Include="wwwroot\src\sass\layout\_index.scss" />
+    <None Include="wwwroot\src\sass\layout\_menu-list.scss" />
+    <None Include="wwwroot\src\sass\layout\_navbar.scss" />
+    <None Include="wwwroot\src\sass\layout\_reservation.scss" />
+    <None Include="wwwroot\src\sass\layout\_shop-full.scss" />
+    <None Include="wwwroot\src\sass\layout\_shop-sidebar.scss" />
+    <None Include="wwwroot\src\sass\utilities\_utilities.scss" />
+    <None Include="wwwroot\src\slider.js" />
+    <None Include="wwwroot\src\style.scss" />
   </ItemGroup>
 
   <ItemGroup>

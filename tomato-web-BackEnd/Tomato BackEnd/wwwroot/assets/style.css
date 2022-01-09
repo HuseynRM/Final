@@ -1012,12 +1012,16 @@ a {
   position: relative;
 }
 .card-item--image {
-  max-width: 100%;
   display: block;
+  flex: 1;
+}
+.card-item--image img {
+  max-width: 100%;
 }
 .card-item--article {
   margin-left: 1rem;
   display: block;
+  flex: 2;
 }
 .card-item--link {
   text-decoration: none;
@@ -1041,11 +1045,15 @@ a {
 }
 
 .ci-close {
-  font-size: 13px;
+  font-size: 21px;
   color: #555;
   position: absolute;
   top: 8px;
   right: 10px;
+  cursor: pointer;
+}
+
+.close {
   cursor: pointer;
 }
 
@@ -1107,6 +1115,7 @@ a {
   display: none;
   align-items: center;
   justify-content: flex-end;
+  outline: 2px solid slateblue;
 }
 
 .hamburger-menu {
@@ -1681,6 +1690,7 @@ input::-webkit-inner-spin-button {
   color: #0a0a0a;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .shop-grid {
@@ -1811,6 +1821,97 @@ select {
 
 .menu-btn {
   padding: 20px 0;
+}
+
+.cart-table {
+  font-size: 10px;
+}
+@media only screen and (min-width: 48rem) {
+  .cart-table {
+    font-size: 1rem;
+  }
+}
+.cart-table thead {
+  border-top: 1px solid #000;
+}
+.cart-table thead th {
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+}
+.cart-table tbody td {
+  vertical-align: middle;
+  text-align: center;
+}
+.cart-table tbody td a {
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+}
+@media only screen and (min-width: 48rem) {
+  .cart-table tbody td a {
+    font-size: 15px;
+  }
+}
+.cart-table img {
+  max-width: 50px;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .table > tbody > tr > td {
+    padding: 8px 2px;
+  }
+}
+
+.table thead tr th {
+  border-radius: 0 !important;
+  border: none;
+}
+
+.cart-total {
+  font-size: 1rem;
+}
+
+.actions-coupon {
+  width: 260px;
+  text-align: left;
+  padding: 5px 0 10px;
+}
+.actions-coupon input {
+  width: 70%;
+}
+.actions-coupon button {
+  color: #fff;
+  text-transform: uppercase;
+  background: #848484;
+  padding: 0 1rem;
+  border: none;
+  line-height: 34px;
+  font-size: 12px;
+  transition: 0.4s;
+  font-weight: 700;
+}
+.actions .form-group label {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.actions .cart-btn {
+  margin-top: 17px;
+}
+
+input,
+textarea {
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background-color: var(--light);
+  padding: 0.625rem 1rem;
+  font-family: inherit;
 }
 
 .container {

@@ -1,0 +1,111 @@
+@use '../base/root' as *;
+@use '../abstracts/mixins' as *;
+
+.cart-table {
+    font-size: 10px;
+
+    @include mq(md) {
+        font-size: 1rem;
+    }
+
+    thead {
+        border-top: 1px solid #000;
+
+        th {
+            background: #000;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 40px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+
+    tbody {
+        td {
+            vertical-align: middle;
+            text-align: center;
+
+            a {
+                font-size: 11px;
+                color: #000;
+                font-weight: 700;
+                @include mq(md) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    img {
+        max-width: 50px;
+        height: auto;
+    }
+}
+
+.table > tbody > tr > td {
+    @media (max-width: 480px) {
+        padding: 8px 2px;
+    }
+}
+
+.table {
+    thead {
+        tr {
+            th {
+                border-radius: 0 !important;
+                border: none;
+            }
+        }
+    }
+}
+
+.cart-total {
+    font-size: 1rem;
+}
+
+.actions {
+    &-coupon {
+        width: 260px;
+        text-align: left;
+        padding: 5px 0 10px;
+        input {
+            width: 70%;
+        }
+
+        button {
+            color: #fff;
+            text-transform: uppercase;
+            background: #848484;
+            // height: 34px;
+            padding: 0 1rem;
+            border: none;
+            line-height: 34px;
+            // width: 30%;
+            font-size: 12px;
+            transition: 0.4s;
+            font-weight: 700;
+        }
+    }
+
+    .form-group {
+        label {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+    .cart-btn {
+        margin-top: 17px;
+    }
+}
+
+input,
+textarea {
+    border-radius: 0;
+    outline: none;
+    border: none;
+    background-color: var(--light);
+    padding: 0.625rem 1rem;
+    font-family: inherit;
+}
