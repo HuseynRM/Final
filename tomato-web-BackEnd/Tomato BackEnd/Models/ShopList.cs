@@ -22,5 +22,10 @@ namespace Tomato_BackEnd.Models
         public List<ProductSingle> ProductSingles { get; set; }
         public int? ProductSingleId { get; set; }
         public virtual ICollection<Basket> Baskets { get; set; }
+        public AppUser AppUser { get; set; }
+        public string AppUserId { get; set; }
+        public int Count { get; set; }
+
+
     }
 }

@@ -1,0 +1,45 @@
+﻿@model MemberEditModel
+@{
+    Layout = null;
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form asp-action="edit" asp-controller="account" method="post">
+
+                <label>UserName</label>
+                <div class="form-group pass_show">
+                    <input asp-for="@Model.UserName" placeholder="UserName">
+                    <span class="text-danger" asp-validation-for="@Model.UserName"></span>
+                </div>
+                <label>Password</label>
+                <div class="form-group pass_show">
+                    <input asp-for="@Model.Password" placeholder="Password">
+                    <span class="text-danger" asp-validation-for="@Model.Password"></span>
+                </div>
+                <label>Confirm Password</label>
+                <div class="form-group pass_show">
+                    <input asp-for="@Model.ConfirmedPassword" placeholder="ConfirmedPassword">
+                    <span class="text-danger" asp-validation-for="@Model.ConfirmedPassword"></span>
+                </div>
+                <label>Current Password</label>
+                <div class="form-group pass_show">
+                    <input asp-for="@Model.CurrentPassword" placeholder="CurrentPassword">
+                    <span class="text-danger" asp-validation-for="@Model.CurrentPassword"></span>
+                </div>
+                <button type="submit" class="btn btn-danger">sign up</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+

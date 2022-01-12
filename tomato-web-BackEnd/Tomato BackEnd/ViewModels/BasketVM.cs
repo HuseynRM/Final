@@ -8,6 +8,7 @@ namespace Tomato_BackEnd.ViewModels
 {
     public class BasketVM:BaseEntity
     {
+        public int ProductId { get; set; }
         public string Title { get; set; }
         public string Img { get; set; }
         public double NewPrice { get; set; }

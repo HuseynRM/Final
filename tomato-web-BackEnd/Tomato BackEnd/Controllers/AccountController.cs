@@ -3,9 +3,11 @@ using MailKit.Security;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MimeKit;
 using MimeKit.Text;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Tomato_BackEnd.DAL;
 using Tomato_BackEnd.Models;
@@ -281,5 +283,58 @@ namespace Tomato_BackEnd.Controllers
             return RedirectToAction("login");
         }
 
+        public async Task<IActionResult> Edit()
+        {
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+            MemberEditModel member = new MemberEditModel
+            {
+                UserName = user.UserName,
+            };
+            return View(member);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(MemberEditModel member)
+        {
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            if (_userManager.Users.Any(x => x.UserName == member.UserName && x.Id != user.Id))
+            {
+                ModelState.AddModelError("UserName", "UserName already taken!");
+                return View();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            user.UserName = member.UserName;
+
+
+            if (!string.IsNullOrWhiteSpace(member.Password))
+            {
+                if (string.IsNullOrWhiteSpace(member.CurrentPassword))
+                {
+                    ModelState.AddModelError("CurrentPassword", "CurrentPassword can not be emtpy");
+                    return View();
+                }
+
+                var result = await _userManager.ChangePasswordAsync(user, member.CurrentPassword, member.Password);
+                if (!result.Succeeded)
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+
+                    return View();
+                }
+            }
+            await _userManager.UpdateAsync(user);
+
+            await _signInManager.SignInAsync(user, true);
+            return RedirectToAction("index", "home");
+        }
     }
 }
