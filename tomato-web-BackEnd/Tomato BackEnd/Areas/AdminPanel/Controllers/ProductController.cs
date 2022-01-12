@@ -26,9 +26,7 @@ namespace Tomato_BackEnd.Areas.AdminPanel.Controllers
         {
             ViewBag.SelectedPage = page;
             ViewBag.TotalPageCount = Math.Ceiling(_context.ShopLists.Count() / 4m);
-            List<ShopList> lists =
-                await _context.ShopLists.Include(a=>a.ShopCatagory).Skip((page - 1) * 4).Take(4).ToListAsync();
-            return View(lists);
+            return View(await _context.ShopLists.Include(a => a.ShopCatagory).Skip((page - 1) * 4).Take(4).ToListAsync());
         }
         public async Task<IActionResult> Edit(int id)
         {

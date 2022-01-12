@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -21,8 +22,11 @@ namespace Tomato_BackEnd.Controllers
             _context = context;
             _userManager = userManager;
         }
-        public async Task<IActionResult> Index(int? categoryId)
+        public async Task<IActionResult> Index(int? categoryId,int page=1)
         {
+            ViewBag.SelectedPage = page;
+            ViewBag.TotalPageCount = Math.Ceiling(_context.ShopLists.Count() / 4m);
+
             List<ShopList> ShopList = new List<ShopList>();
             if (categoryId == null)
             {
@@ -36,8 +40,9 @@ namespace Tomato_BackEnd.Controllers
             ProductListVM productListVM = new ProductListVM()
             {
                 ShopLists = ShopList,
+                
                 ShopCatagorys = await _context.ShopCatagories.Include(x => x.ShopLists).ToListAsync(),
-
+                
 
             };
             return View(productListVM);
@@ -109,30 +114,37 @@ namespace Tomato_BackEnd.Controllers
             }
             return Json(products);
         }
-        public async Task<IActionResult> DeleteBasket(int? Id)
+
+        [HttpPost]
+        public async Task<JsonResult> DeleteBasket(int? Id)
         {
-            if (!User.Identity.IsAuthenticated)
+            string Message = string.Empty;
+            try
             {
-                return RedirectToAction("Login", "Account");
+                AppUser appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+
+                if (Id == null)
+                    Message = "Nullable";
+
+                List<Basket> basketProducts = await _context.Baskets.Include(b => b.ShopList)
+                        .Where(b => b.IsDeleted == false).ToListAsync();
+
+                Basket basketProduct = basketProducts
+                    .FirstOrDefault(b => b.Id == Id && b.IsDeleted == false && b.AppUserId == appUser.Id);
+
+                if (basketProduct == null)
+                    Message = "Not Found";
+
+                basketProduct.IsDeleted = true;
+
+                _context.SaveChanges();
             }
+            catch (Exception)
+            {
+                Message = "Project Error";
+            } 
 
-            AppUser appUser = await _userManager.FindByNameAsync(User.Identity.Name);
-
-            if (Id == null) return NotFound();
-
-            List<Basket> basketProducts = await _context.Baskets.Include(b => b.ShopList)
-                    .Where(b => b.IsDeleted == false).ToListAsync();
-
-            Basket basketProduct = basketProducts
-                .FirstOrDefault(b => b.Id == Id && b.IsDeleted == false && b.AppUserId == appUser.Id);
-
-            if (basketProduct == null) return NotFound();
-
-            basketProduct.IsDeleted = true;
-
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("index", "Home");
+            return Json(new { error = Message, success = Message == string.Empty });
         }
     }
 }

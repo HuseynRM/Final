@@ -111,6 +111,7 @@
                         {
                             <li><a style=" font-weight: 700; line-height: 3rem; color: #fff; padding: 0 0.8rem; letter-spacing: 1px; font-size: 13px; display: flex; align-items: center; justify-content: space-between;" asp-action="edit" asp-controller="account">@user.UserName</a></li>
                             <li><a style=" font-weight: 700; line-height: 3rem; color: #fff; padding: 0 0.8rem; letter-spacing: 1px; font-size: 13px; display: flex; align-items: center; justify-content: space-between;" asp-action="logout" asp-controller="account">logout</a></li>
+                            
                         }
                             </li>
 
@@ -141,7 +142,7 @@
                                                 <div class="card-item--article">
                                                     <a href="#" class="card-item--link">@basket.ShopList.FName</a>
                                                     <span class="card-item--price">$@basket.Count x @((basket.Count * (int)(basket.ShopList.Price)).ToString("F2")) </span>
-                                                    <i  class="fa fa-times ci-close" ></i>
+                                                    <button class="bg-transparent border-0" style="z-index: 99999999999!important;" type="submit" onclick="DeleteFromBasket(@basket.Id)"><i class="fa fa-times ci-close"></i></button>
                                                 </div>
                                             </div>
                                         }
@@ -166,23 +167,38 @@
                                                     </span>
                                                 }
                                             </span>
-                                            <a   class="btn-nav btn-primary-nav">View cart</a>
+                                            <a class="btn-nav btn-primary-nav">View cart</a>
                                         </div>
                                     </ul>
                                 </div>
                             </li>
                         </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hamburger-menu-container">
-                <div class="hamburger-menu">
-                    <span class="bar"></span>
+                <div class="hamburger-menu-container">
+                    <div class="hamburger-menu">
+                        <span class="bar"></span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    @RenderBody()
-    @await Component.InvokeAsync("Footer")
-</body>
+        </header>
+        @RenderBody()
+        @await Component.InvokeAsync("Footer")
+        <script>
+            function DeleteFromBasket(Id) {
+                $.ajax({
+                    data: { Id: Id },
+                    type: 'POST',
+                    url: '@Url.Action("DeleteBasket", "ProductList")',
+                    success: function (d) {
+                        if (d.success)
+                            location.reload();
+                        else
+                            alert(d.error);
+                    }
+                })
+            }
+        </script>
+    </body>
 </html>

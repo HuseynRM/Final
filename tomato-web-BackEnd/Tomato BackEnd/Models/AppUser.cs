@@ -25,7 +25,7 @@ namespace Tomato_BackEnd.Models
         [StringLength(maximumLength: 50)]
         [DataType(DataType.Password)]
         public string CurrentPassword { get; set; }
-        //public List<Request> Requests { get; set; }
+        public bool IsDeleted { get; set; }
         public virtual ICollection<Basket> Baskets { get; set; }
 
     }

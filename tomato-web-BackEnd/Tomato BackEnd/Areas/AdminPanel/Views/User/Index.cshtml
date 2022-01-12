@@ -1,0 +1,47 @@
+﻿@model ICollection<AppUserVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<h1 class="h3 mb-4 text-gray-800">Users Page's</h1>
+
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Email</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Settings</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AppUserVM appUserVM in Model)
+        {
+            <tr>
+                <td>@appUserVM.Email</td>
+                <td>@appUserVM.UserName</td>
+                @if (appUserVM.IsDeleted)
+                {
+                    <td style="color:red">De Active</td>
+                }
+                else
+                {
+                    <td style="color:green">Active</td>
+                }
+                <td>
+                    @if (appUserVM.IsDeleted)
+                    {
+                        <a class="btn btn-primary" asp-action="ChangeStatus" asp-route-Id="@appUserVM.Id" asp-route-status="false">Activate</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-warning" asp-action="ChangeStatus" asp-route-Id="@appUserVM.Id" asp-route-status="true">De Activate</a>
+                    }
+                    <a class="btn btn-danger" asp-action="ChangeRole" asp-route-Id="@appUserVM.Id">Change Role</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

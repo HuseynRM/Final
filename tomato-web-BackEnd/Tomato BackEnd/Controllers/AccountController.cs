@@ -252,7 +252,7 @@ namespace Tomato_BackEnd.Controllers
 
             AppUser user = await _userManager.FindByEmailAsync(loginModel.Email);
 
-            if (user == null || user.IsAdmin)
+            if (user == null)
             {
                 ModelState.AddModelError("", "Email or Password is incorrect");
                 return View();
@@ -265,8 +265,14 @@ namespace Tomato_BackEnd.Controllers
                 ModelState.AddModelError("", "Email or Password is incorrect");
                 return View();
             }
-
-            return RedirectToAction("index", "home");
+            if (user.IsAdmin)
+            {
+                return RedirectToAction("Index", "Dashboard", new { area = "AdminPanel" });
+            }
+           else
+           {
+               return RedirectToAction("Index", "Home");
+           }
         }
 
         public async Task<IActionResult> Logout()

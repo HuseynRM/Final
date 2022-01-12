@@ -26,8 +26,15 @@ using Tomato_BackEnd.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Tomato_BackEnd.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7ae8e0d113aaa94b12ebaf0e141df3c490cfb247", @"/Areas/AdminPanel/Views/HomeInfo/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"438ef33abf12b097aab185b764b981f1625d7715", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c4d25c6480395fb1524bf469e873194af75a27da", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     public class Areas_AdminPanel_Views_HomeInfo_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IList<RestaurantHome>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -96,7 +103,7 @@ using Tomato_BackEnd.Models;
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"container-fluid\">\r\n    <div class=\"row d-flex justify-content-end mb-2\">\r\n        <div class=\"col-md-1 m-3\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb2478836", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb2479069", async() => {
                 WriteLiteral("\r\n                <button class=\"backendButton px-4 py-2 mr--30\" style=\" border-radius: 20px; color: white; background-image: linear-gradient(to right,blue,red); font: bold; \">CREATE</button>\r\n            ");
             }
             );
@@ -173,7 +180,7 @@ using Tomato_BackEnd.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                    <div class=\"img-box\" style=\"position:relative;max-width:200px;background-color:black;width:200px;height:200px;max-height:200px;\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24712603", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24712836", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -216,7 +223,7 @@ WriteAttributeValue("", 1978, item.HomeImg, 1978, 13, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                                <div class=\"img-box\" style=\"position:relative;max-width:200px;background-color:black;width:200px;height:200px;max-height:200px;\">\r\n                                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24715360", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24715593", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -259,7 +266,7 @@ WriteAttributeValue("", 2548, item.HomeImg1, 2548, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                    <div class=\"img-box\" style=\"position:relative;max-width:200px;background-color:black;width:200px;height:200px;max-height:200px;\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24718107", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24718340", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -294,7 +301,7 @@ WriteAttributeValue("", 3085, item.HomeImg2, 3085, 14, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" />\r\n                    </div>\r\n                </td>\r\n                <td class=\"col-md-2\">\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24720405", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24720638", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -326,7 +333,7 @@ WriteAttributeValue("", 3085, item.HomeImg2, 3085, 14, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24722725", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24722958", async() => {
                 WriteLiteral("Delete");
             }
             );
@@ -366,7 +373,7 @@ WriteAttributeValue("", 3085, item.HomeImg2, 3085, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("        </tbody>\r\n    </table>\r\n\r\n\r\n\r\n\r\n    <nav aria-label=\"Page navigation example\" class=\"d-flex justify-content-center\">\r\n        <ul class=\"pagination\">\r\n            <li class=\"page-item\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24725548", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24725781", async() => {
                 WriteLiteral("ilk");
             }
             );
@@ -387,7 +394,7 @@ WriteAttributeValue("", 3085, item.HomeImg2, 3085, 14, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n            <li class=\"page-item\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24727159", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24727392", async() => {
                 WriteLiteral("\r\n                    <span aria-hidden=\"true\">&laquo;</span>\r\n                    <span class=\"sr-only\">Previous</span>\r\n                ");
             }
             );
@@ -479,7 +486,7 @@ WriteAttributeValue("", 3085, item.HomeImg2, 3085, 14, false);
 #line hidden
 #nullable disable
             WriteLiteral("                <li class=\"page-item\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24731213", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24731446", async() => {
 #nullable restore
 #line 133 "C:\Users\ASUS\OneDrive\Рабочий стол\Final\tomato-web-BackEnd\Tomato BackEnd\Areas\AdminPanel\Views\HomeInfo\Index.cshtml"
                                                                                                                                              Write(i);
@@ -533,7 +540,7 @@ AddHtmlAttributeValue("", 5128, i==selectedPage?"background-color:blue;color:whi
 #line hidden
 #nullable disable
             WriteLiteral("            <li class=\"page-item\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24734485", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24734718", async() => {
                 WriteLiteral("\r\n                    <span aria-hidden=\"true\">&raquo;</span>\r\n                    <span class=\"sr-only\">Next</span>\r\n                ");
             }
             );
@@ -564,7 +571,7 @@ AddHtmlAttributeValue("", 5128, i==selectedPage?"background-color:blue;color:whi
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            </li>\r\n            <li class=\"page-item\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24736930", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ae8e0d113aaa94b12ebaf0e141df3c490cfb24737163", async() => {
                 WriteLiteral("son");
             }
             );

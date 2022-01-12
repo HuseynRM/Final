@@ -1,0 +1,27 @@
+﻿@model AppUserVM 
+@{
+    ViewData["Title"] = "ChangeRole";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+}
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.Id</li>
+        <li class="list-group-item">@Model.Email</li>
+        <li class="list-group-item">@Model.UserName</li>
+        <li class="list-group-item">@Model.Role</li>
+    </ul>
+    <a class="btn btn-primary" asp-action="Index">Go List</a>
+    <form method="post">
+        <div class="mb-3">
+            <label>Roles</label>
+            <select class="form-control" asp-for="Roles">
+                @foreach (var role in Model.Roles)
+                {
+                    <option value="@role">@role</option>
+                }
+            </select>
+            <span class="alert-danger" asp-validation-for="Roles"></span>
+        </div>
+        <button type="submit" class="btn btn-danger">Change Role</button>
+    </form>
+</div>
