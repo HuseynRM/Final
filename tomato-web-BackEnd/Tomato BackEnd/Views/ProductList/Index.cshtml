@@ -2,20 +2,20 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    //int count;
-    //if (ViewBag.SelectedPage == 1)
-    //{
-    //    count = 0;
-    //}
-    //else
-    //{
-    //    count = (ViewBag.SelectedPage - 1) * 8;
-    //}
+    int count;
+    if (ViewBag.SelectedPage == 1)
+    {
+        count = 0;
+    }
+    else
+    {
+        count = (ViewBag.SelectedPage - 1) * 8;
+    }
 }
-@*@{ 
+@{ 
     int totalPage = (int)ViewBag.TotalPageCount;
     int selectedPage = (int)ViewBag.SelectedPage;
-}*@
+}
 <section class="page-header">
     <div class="container">
         <div class="row text-center">
@@ -75,10 +75,10 @@
                         }
                     </div>
                 </div>
-                <a href="home.html" class="btn btn-primary btn-load">Load more</a>
+               
             </div>
         </div>
-        @*<nav aria-label="Page navigation example" class="d-flex justify-content-center">
+        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" asp-route-page="1">ilk</a></li>
                 <li class="page-item">
@@ -140,6 +140,6 @@
                 </li>
                 <li class="page-item"><a class="page-link" asp-route-page="@ViewBag.TotalPageCount">son</a></li>
             </ul>
-        </nav>*@
+        </nav>
     </div>
 </div>

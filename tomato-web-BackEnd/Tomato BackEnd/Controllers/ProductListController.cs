@@ -30,12 +30,12 @@ namespace Tomato_BackEnd.Controllers
             List<ShopList> ShopList = new List<ShopList>();
             if (categoryId == null)
             {
-                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).ToListAsync();
+                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).Skip((page - 1) * 6).Take(6).ToListAsync();
             }
             else
             {
                 ViewBag.SelectedCategoryId = categoryId;
-                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).Where(x => x.ShopCatagoryId == categoryId).ToListAsync();
+                ShopList = await _context.ShopLists.Include(x => x.ShopCatagory).Skip((page-1)*6).Take(6).Where(x => x.ShopCatagoryId == categoryId).ToListAsync();
             }
             ProductListVM productListVM = new ProductListVM()
             {
@@ -96,7 +96,7 @@ namespace Tomato_BackEnd.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "ProductList");
         }
         public async Task<IActionResult> ShowBasket()
         {

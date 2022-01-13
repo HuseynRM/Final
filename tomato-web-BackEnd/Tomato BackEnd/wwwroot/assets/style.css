@@ -951,7 +951,7 @@ a {
   right: 0;
   width: 14rem;
   opacity: 0;
-  pointer-events: none;
+  
   transition: 0.5s;
 }
 
@@ -1006,7 +1006,7 @@ a {
 .card-item {
   display: flex;
   padding: 0.75rem;
-  pointer-events: none;
+  
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
   position: relative;
@@ -1063,7 +1063,7 @@ a {
   padding-left: 1rem;
   padding-bottom: 1rem;
   cursor: pointer;
-  pointer-events: none;
+  
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1095,7 +1095,7 @@ a {
   border-top: 2px solid #f9c56f;
   width: 18rem;
   background-color: rgba(0, 0, 0, 0.85);
-  pointer-events: none;
+  
 }
 
 .dropdown-lg:before {
